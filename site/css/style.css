@@ -29,13 +29,14 @@ header{
     width: 100%;
     height: 95px;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 /*header>logo*/
 
 header .logo{
     overflow: hidden;
-    padding: 10px 5px;
+    padding: 10px;
 }
 
 header .logo img{
@@ -98,7 +99,7 @@ header .nav-primary{
 }
 
 .nav-option{
-    padding: 10px 0;
+    padding: 10px 0 11px 0;
     margin: 0 10px;
     border-bottom: 3px solid transparent
 }
@@ -116,4 +117,43 @@ header .nav-primary .nav-selected a{
 header .nav-primary .nav-option:hover,
 .nav-selected{
     border-bottom: 3px solid #8ca4bf;
+}
+
+/*header-sticky*/
+.sticky-header{
+    height: 80px;
+    transition: 0.5s;
+}
+
+.sticky-header .nav-second{
+    display: none;
+}
+
+.sticky-header .logo img{
+    width: 180px;
+}
+
+.sticky-header .nav-primary{
+    padding: 21px 0;
+}
+
+/*mobile-header*/
+.logo-ipad,
+.logo-iphone{
+    overflow: hidden;
+}
+
+.logo-ipad img{
+    width: 200px;
+    padding: 5px;
+}
+
+.logo-iphone img{
+    width: 60px;
+    padding: 10px 0;
+}
+
+.mob-lang-btn{
+    padding: 20px 0;
+    font-size: 2em;
 }
