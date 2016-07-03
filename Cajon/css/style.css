@@ -157,3 +157,66 @@ header .nav-primary .nav-option:hover,
     padding: 20px 0;
     font-size: 2em;
 }
+
+/*FOOTER*/
+/*footer>subfooter*/
+footer{
+    bottom: 0;
+}
+
+footer .subfooter{
+    background-color: rgba(24, 27, 33, 0.8);
+    padding: 20px 0;
+}
+
+footer .rrss span{
+    font-size: 2em;
+    color: rgba(255,255,255,0.5);
+    transition: 0.5s;
+}
+
+footer .rrss span:hover{
+    color: white;
+}
+
+/*footer>footerend*/
+footer .footerend{
+    background-color: #181b21;
+    padding: 20px 0;
+}
+
+footer .logo-footer{
+    overflow: hidden;
+}
+
+footer .logo-footer img{
+    width: 150px;
+    padding: 0 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+footer .logo-footer img:hover{
+    opacity: 1;
+}
+
+footer .copyright,
+footer .coder{
+    padding: 15px 5px 0 0;
+}
+
+footer .footerend .copyright,
+footer .footerend .copyright a,
+footer .footerend .coder,
+footer .footerend .coder a{
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .footerend .copyright a:hover,
+footer .footerend .coder a:hover{
+    color: white;
+    text-decoration: line-through;
+    transition: 0.5s;
+}

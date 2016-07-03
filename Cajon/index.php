@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile-style.css">
     <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
     <!--font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
@@ -82,7 +82,7 @@
         </div>
     </header>
     
-    <section>
+    <div><section>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
     </section><section>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
@@ -106,7 +106,11 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
     </section><section>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section>
+    </section></div>
+    
+    <?php include('footer.php')?>
+    
+    <!--scripts-->
     <script src="js/sticky.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
