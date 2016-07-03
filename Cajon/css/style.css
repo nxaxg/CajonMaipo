@@ -145,7 +145,7 @@ header .nav-primary .nav-option:hover,
     width: 100%;
     background-color: rgba(24, 27, 33, 0.8);
     outline: 2px solid white;
-    z-index: 5;
+    z-index: 1000;
 }
 
 .lang-menu .lang-option{
@@ -161,6 +161,7 @@ header .nav-primary .nav-option:hover,
 .burguer-menu-mob .menu-option:hover,
 .burguer-menu-mob .menu-sel{
     text-decoration: line-through;
+    font-weight: bold;
 }
 
 .lang-icon,
@@ -186,8 +187,9 @@ header .nav-primary .nav-option:hover,
     right: 0;
     width: 100%;
     background-color: rgba(24, 27, 33, 0.9);
-    z-index: 5;
+    z-index: 1000000000;
     text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .lang-menu-mob .lang-option,
@@ -199,6 +201,7 @@ header .nav-primary .nav-option:hover,
 .burguer-menu-mob .menu-option a{
     font-size: 1.2em;
     font-weight: lighter;
+    text-transform: uppercase;
 }
 
 .burger-menu-action{
@@ -243,10 +246,17 @@ header .nav-primary .nav-option:hover,
     transition: 0.5s;
 }
 
+.menu-divider{
+    width: 80%;
+    margin: 0 10%;
+}
+
 /*FOOTER*/
 /*footer>subfooter*/
 footer{
     bottom: 0;
+    position: relative;
+    z-index: 1;
 }
 
 footer .subfooter{
@@ -312,4 +322,10 @@ footer .copyright{
 
 footer .coder{
     text-align: right;
+}
+
+
+/*fix the z-index footer elements problem*/
+footer.z-footer{
+    z-index: -1;
 }

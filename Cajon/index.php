@@ -36,8 +36,10 @@
                             <span class="col-lg-2 col-md-2 fa fa-search"></span>
                         </div>
                         <div class="login col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-2">
-                            Login
-                            <span class="fa fa-user"></span>
+                            <a href="login.php">
+                                Login
+                                <span class="fa fa-user"></span>
+                            </a>
                         </div>
                         <div class="lang col-lg-2 col-md-2">
                             Idioma
@@ -55,11 +57,11 @@
                 <div class="nav-primary col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-0">
                     <nav>
                         <ul class="list-inline text-right">
-                            <li class="nav-option nav-selected"><a href="index.html">Home</a></li>
-                            <li class="nav-option"><a href="#">Información</a></li>
-                            <li class="nav-option"><a href="#">Localidades</a></li>
-                            <li class="nav-option"><a href="#">Actividades</a></li>
-                            <li class="nav-option"><a href="#">Contacto</a></li>
+                            <li class="nav-option nav-selected"><a href="index.php">Home</a></li>
+                            <li class="nav-option"><a href="informacion.php">Información</a></li>
+                            <li class="nav-option"><a href="localidades.php">Localidades</a></li>
+                            <li class="nav-option"><a href="actividades.php">Actividades</a></li>
+                            <li class="nav-option"><a href="contacto.php">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -93,13 +95,13 @@
                     <span class="fa fa-navicon menu-icon" title="Menú"></span>
                 </div>
                 <ul class="burguer-menu-mob list-unstyled show-xs show-sm">
-                        <li class="menu-option menu-sel"><a href="#">Home</a></li>
-                        <li class="menu-option"><a href="#">Información</a></li>
-                        <li class="menu-option"><a href="#">Localidades</a></li>
-                        <li class="menu-option"><a href="#">Actividades</a></li>
-                        <li class="menu-option"><a href="#">Contacto</a></li>
+                        <li class="menu-option menu-sel"><a href="index.php">Home</a></li>
+                        <li class="menu-option"><a href="informacion.php">Información</a></li>
+                        <li class="menu-option"><a href="localidades.php">Localidades</a></li>
+                        <li class="menu-option"><a href="actividades.php">Actividades</a></li>
+                        <li class="menu-option"><a href="contacto.php">Contacto</a></li>
                         <hr class="menu-divider">
-                        <li class="menu-option"><a href="#">Login</a></li>
+                        <li class="menu-option"><a href="login.php">Login</a></li>
                 </ul>
             </div>
         </div>

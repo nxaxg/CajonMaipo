@@ -15,6 +15,12 @@ $(document).ready(function(){
            $(this).siblings().removeClass('lang-sel');
            $(this).addClass('lang-sel');
         });
+        
+        /*hide-burguer*/
+        $(".burguer-menu-mob").slideUp();
+        $(".menu-icon").removeClass('burger-menu-action');
+        
+        footerZ();
     });
     //burguer-menu animation
     $(".mob-menu-btn").click(function(){
@@ -22,9 +28,15 @@ $(document).ready(function(){
         
         $(".menu-icon").toggleClass('burger-menu-action');
         
-        $(".menu-option").click(function(){
-           $(this).siblings().removeClass('menu-sel');
-           $(this).addClass('menu-sel');
-        });
+        /*hide-lang*/
+        $(".lang-menu-mob").slideUp();
+        $(".lang-icon").removeClass('burger-menu-action');
+        footerZ();
     });
 });
+
+
+/*fix the z-index footer elements problem*/
+function footerZ(){
+    $("footer").toggleClass("z-footer");
+};
