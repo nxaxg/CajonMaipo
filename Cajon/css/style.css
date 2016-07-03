@@ -15,7 +15,8 @@ a{
     text-decoration: none;
     color: white;
 }
-a:hover{
+a:hover,
+a:focus{
     text-decoration: none;
     color: inherit;
 }
@@ -28,7 +29,7 @@ header{
     position: fixed;
     width: 100%;
     height: 95px;
-    overflow: hidden;
+    overflow: visible;
     transition: 0.5s;
 }
 
@@ -137,25 +138,109 @@ header .nav-primary .nav-option:hover,
     padding: 21px 0;
 }
 
+/*header>lang-menu*/
+.lang-menu{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: rgba(24, 27, 33, 0.8);
+    outline: 2px solid white;
+    z-index: 5;
+}
+
+.lang-menu .lang-option{
+    padding: 5px 0;
+    color: white;
+    font-weight: lighter;
+}
+
+.lang-menu .lang-option:hover,
+.lang-menu .lang-sel,
+.lang-menu-mob .lang-option:hover,
+.lang-menu-mob .lang-sel,
+.burguer-menu-mob .menu-option:hover,
+.burguer-menu-mob .menu-sel{
+    text-decoration: line-through;
+}
+
+.lang-icon,
+.menu-icon{
+    transition: transform 0.4s;
+}
+
+.lang-menu-action {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    transition: 0.4s;
+}
+
+/*lang-menu-mobile*/
+.lang-menu-mob,
+.burguer-menu-mob{
+    position: absolute;
+    top: 98%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(24, 27, 33, 0.9);
+    z-index: 5;
+    text-align: center;
+}
+
+.lang-menu-mob .lang-option,
+.burguer-menu-mob .menu-option{
+    padding: 20px 0;
+}
+
+.lang-menu-mob .lang-option a,
+.burguer-menu-mob .menu-option a{
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+.burger-menu-action{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: 0.4s;
+}
+
 /*mobile-header*/
 .logo-ipad,
 .logo-iphone{
     overflow: hidden;
+    padding: 0;
 }
 
 .logo-ipad img{
     width: 200px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .logo-iphone img{
     width: 60px;
     padding: 10px 0;
+    margin: 0;
 }
 
-.mob-lang-btn{
-    padding: 20px 0;
+.mob-lang-btn,
+.mob-menu-btn{
+    padding: 18px 0;
     font-size: 2em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.mob-lang-btn:hover,
+.mob-menu-btn:hover{
+    color: rgba(255,255,255,0.5);
+    transition: 0.5s;
 }
 
 /*FOOTER*/
@@ -210,7 +295,7 @@ footer .footerend .copyright,
 footer .footerend .copyright a,
 footer .footerend .coder,
 footer .footerend .coder a{
-    font-weight: 100;
+    font-weight: lighter;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -219,4 +304,12 @@ footer .footerend .coder a:hover{
     color: white;
     text-decoration: line-through;
     transition: 0.5s;
+}
+
+footer .copyright{
+    text-align: center;
+}
+
+footer .coder{
+    text-align: right;
 }

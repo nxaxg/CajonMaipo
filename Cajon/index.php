@@ -21,7 +21,7 @@
 
 <body>
     <header class="normal-header">
-       <!--desktop header-->
+        <!--desktop header-->
         <div id="desktop-hdr" class="container-fluid col-lg-12 col-md-12 hidden-sm hidden-xs">
             <div class="row">
                 <figure class="logo col-lg-4 col-md-4">
@@ -41,27 +41,27 @@
                         </div>
                         <div class="lang col-lg-2 col-md-2">
                             Idioma
-                            <span class="fa fa-globe"></span>
+                            <span class="lang-icon fa fa-globe"></span>
                             <!--hidden menu-->
-                            <ul class="lang-menu list-unstyled show-lg show-md" hidden>
-                                <li><a href="#">Español</a></li>
-                                <li><a href="#">Inglés</a></li>
-                                <li><a href="#">Alemán</a></li>
-                                <li><a href="#">Portugés</a></li>
+                            <ul class="lang-menu list-unstyled show-lg show-md">
+                                <li class="lang-option lang-sel"><a href="#">Español</a></li>
+                                <li class="lang-option"><a href="#">Inglés</a></li>
+                                <li class="lang-option"><a href="#">Alemán</a></li>
+                                <li class="lang-option"><a href="#">Portugés</a></li>
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="nav-primary col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-0">
-                        <nav>
-                            <ul class="list-inline text-right">
-                                <li class="nav-option nav-selected"><a href="index.html">Home</a></li>
-                                <li class="nav-option"><a href="#">Información</a></li>
-                                <li class="nav-option"><a href="#">Localidades</a></li>
-                                <li class="nav-option"><a href="#">Actividades</a></li>
-                                <li class="nav-option"><a href="#">Contacto</a></li>
-                            </ul>
-                        </nav>
+                    <nav>
+                        <ul class="list-inline text-right">
+                            <li class="nav-option nav-selected"><a href="index.html">Home</a></li>
+                            <li class="nav-option"><a href="#">Información</a></li>
+                            <li class="nav-option"><a href="#">Localidades</a></li>
+                            <li class="nav-option"><a href="#">Actividades</a></li>
+                            <li class="nav-option"><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -69,52 +69,87 @@
         <div id="mobile-hdr" class="container-fluid col-sm-12 col-xs-12 hidden-lg hidden-md">
             <div class="row">
                 <figure class="logo-ipad col-sm-4 hidden-xs">
-                    <img src="img/logo-big-white.png" alt="Logo cajón del maipo white">
+                    <a href="#" title="Take me Home">
+                        <img src="img/logo-big-white.png" alt="Logo cajón del maipo white">
+                    </a>
                 </figure>
                 <figure class="logo-iphone col-xs-4 hidden-sm">
-                    <img src="img/logo-sticky-white.png" alt="Logo cajón del maipo white">
+                    <a href="#" title="Take me Home">
+                        <img src="img/logo-sticky-white.png" alt="Logo cajón del maipo white">
+                    </a>
                 </figure>
-                <div class="mob-lang-btn col-sm-1 col-xs-2 col-sm-offset-6 col-xs-offset-4 text-center">
-                    <span class="fa fa-globe"></span>
+                <!--lang-->
+                <div class="mob-lang-btn lang col-sm-1 col-xs-2 col-sm-offset-6 col-xs-offset-4 text-center">
+                    <span class="fa fa-globe lang-icon" title="Idioma"></span>
                 </div>
-                <div class="mob-lang-btn col-sm-1 col-xs-2 text-center">
-                    <span class="fa fa-navicon"></span>
+                <ul class="lang-menu-mob list-unstyled show-xs show-sm">
+                        <li class="lang-option lang-sel"><a href="#">Español</a></li>
+                        <li class="lang-option"><a href="#">Inglés</a></li>
+                        <li class="lang-option"><a href="#">Alemán</a></li>
+                        <li class="lang-option"><a href="#">Portugés</a></li>
+                </ul>
+                <!--menu-->
+                <div class="mob-menu-btn col-sm-1 col-xs-2 text-center">
+                    <span class="fa fa-navicon menu-icon" title="Menú"></span>
                 </div>
+                <ul class="burguer-menu-mob list-unstyled show-xs show-sm">
+                        <li class="menu-option menu-sel"><a href="#">Home</a></li>
+                        <li class="menu-option"><a href="#">Información</a></li>
+                        <li class="menu-option"><a href="#">Localidades</a></li>
+                        <li class="menu-option"><a href="#">Actividades</a></li>
+                        <li class="menu-option"><a href="#">Contacto</a></li>
+                        <hr class="menu-divider">
+                        <li class="menu-option"><a href="#">Login</a></li>
+                </ul>
             </div>
         </div>
     </header>
-    
-    <div><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section><section>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
-    </section></div>
-    
+
+    <div>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
+        </section>
+    </div>
+
     <?php include('php/footer.php')?>
-    
-    <!--scripts-->
-    <script src="js/sticky.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+        <!--scripts-->
+        <script src="js/sticky.js"></script>
+        <script src="js/menus.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
