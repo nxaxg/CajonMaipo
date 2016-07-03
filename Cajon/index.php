@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Cajón del maipo</title>
+    <title>Cajón del Maipo</title>
     <!--btsrp-->
     <script src="js/jquery-1.11.3.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,6 +15,8 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
     <!--font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo-sticky-black.png">
 </head>
 
 <body>
@@ -108,7 +110,7 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus harum, illo eveniet omnis earum non repudiandae architecto mollitia itaque fugit! Ex voluptatem eum voluptatibus! Amet possimus magnam harum minus nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eveniet. Nam sint nostrum sit, ut esse magnam minus! Assumenda in ratione suscipit, alias qui iste cum, quis voluptates tenetur minus?
     </section></div>
     
-    <?php include('footer.php')?>
+    <?php include('php/footer.php')?>
     
     <!--scripts-->
     <script src="js/sticky.js"></script>
