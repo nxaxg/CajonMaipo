@@ -1,9 +1,16 @@
+<?php require_once('php/connection.php');
+
+$queryselect = "select * from `localidades` where 1";
+$result = $connect->query($queryselect);
+$total = $result->num_rows;
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Información | Cajón del Maipo</title>
+    <title>Localidades | Cajón del Maipo</title>
     <!--btsrp-->
     <script src="js/jquery-1.11.3.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -58,8 +65,8 @@
                     <nav>
                         <ul class="list-inline text-right">
                             <li class="nav-option"><a href="index.php">Home</a></li>
-                            <li class="nav-option nav-selected"><a href="informacion.php">Información</a></li>
-                            <li class="nav-option"><a href="localidades.php">Localidades</a></li>
+                            <li class="nav-option"><a href="informacion.php">Información</a></li>
+                            <li class="nav-option nav-selected"><a href="localidades.php">Localidades</a></li>
                             <li class="nav-option"><a href="actividades.php">Actividades</a></li>
                             <li class="nav-option"><a href="contacto.php">Contacto</a></li>
                         </ul>
@@ -96,8 +103,8 @@
                 </div>
                 <ul class="burguer-menu-mob list-unstyled show-xs show-sm">
                     <li class="menu-option"><a href="index.php">Home</a></li>
-                    <li class="menu-option menu-sel"><a href="informacion.php">Información</a></li>
-                    <li class="menu-option"><a href="localidades.php">Localidades</a></li>
+                    <li class="menu-option"><a href="informacion.php">Información</a></li>
+                    <li class="menu-option menu-sel"><a href="localidades.php">Localidades</a></li>
                     <li class="menu-option"><a href="actividades.php">Actividades</a></li>
                     <li class="menu-option"><a href="contacto.php">Contacto</a></li>
                     <hr class="menu-divider">
@@ -107,18 +114,17 @@
         </div>
     </header>
     <!--main-->
-    <section class="main main-info">
+    <section class="main main-localidades">
         <div class="container-fluid full-xs">
             <div class="row">
+               <!--page title-->
                 <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Visita el Cajón del Maipo
+                    Visita nuestras localidades
                 </h1>
             </div>
             <div class="row">
                 <p class="main-bajada col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Informate de las alternativas y modos de llegar a esta localidad.
-En esta sección encontrarás información útil y necesaria para
-conocer y visitar el Cajón del Maipo.
+                    Nadie imaginó que hace millones de años las imponentes montañas del Cajón del Maipo se encontraban sumergidas en el mar, formando parte de un antiguo lecho marino, del que aún es posible encontrar vestigios. Ven y conoce las diferentes localidades que El Cajón del Maipo ofrece.
                 </p>
             </div>
             <div class="row">
@@ -128,61 +134,45 @@ conocer y visitar el Cajón del Maipo.
             </div>
         </div>
     </section>
+    
     <!--content-->
-    <section id="content" class="content content-info">
+    <section id="content" class="content content-localidades">
         <div class="container-fluid full-xs">
             <div class="row">
-                <h2 class="content-title text-center col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">¿Cómo Llegar?</h2>
+                <h2 class="content-title text-center col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">Nuestras localidades</h2>
             </div>
-            <!--info auto-->
-            <div class="container-fluid full-xs ">
-                <div class="row">
-                    <div class="info-auto col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                       <!--logo auto-->
-                        <figure class="col-lg-2 col-sm-3">
-                            <img src="img/info-auto.png" alt="Logo automovil" class="img-responsive hidden-xs text-center">
-                            <figcaption class="info-modo-title">
-                                <h4 class="text-center"> Automovil</h4>
-                            </figcaption>
+            <div class="row">
+                <div class="img-container col-lg-12 col-lg-offset-0 full-xs">
+                  <!--php callback-->
+                   <?php while($localidad = $result->fetch_assoc()){?>
+                       <!--localidad-->
+                        <figure class="col-lg-3 col-sm-3 col-xs-6 full-xs">
+                           <!--img localidad-->
+                            <img src="img/min-<?php echo $localidad[codigo];?>-00.jpg" class="img-responsive" alt="Localidad <?php echo $localidad[titulo];?>">
+                            <a href="localidades/localidad.php?code=<?php echo $localidad[codigo]?>" title="Localidad <?php echo $localidad[titulo];?>">
+                                <figcaption class="text-center">
+                                    <div class="row">
+                                       <!--titulo localidad-->
+                                        <h3 class="col-lg-12 img-title"><?php echo $localidad[titulo];?></h3>
+                                    </div>
+                                </figcaption>
+                            </a>
                         </figure>
-                        <!--info auto-->
-                        <div class="info col-lg-10 col-sm-9 col-xs-12">
-                            <h4 class="info-title">Opción 1</h4>
-                            <p class="info-opcion">Si viene desde el centro de Santiago, debe tomar Av. Vicuña Mackenna, y doblar en Av. Departamental hacia el oriente, hasta llegar a Av. La Florida. Luego seguir derecho, hacia el sur por Av. La Florida hasta llegar a Camino al Volcán y detenerse en la localidad de destino.</p>
-                            <h4 class="info-title">Opción 2</h4>
-                            <p class="info-opcion">Si viene desde el oriente de Santiago, tiene dos alternativas. Una es por Av. Américo Vespucio. Si viene por la Autopista, abandónela por la salida Las Torres y doble hacia el oriente por Av. Departamental, hasta llegar a Av. La Florida. Luego, doble hacia el sur y siga derecho, por Av. La Florida hasta llegar a Camino al Volcán y detenerse en la localidad de destino.</p>
-                            <h4 class="info-title">Opción 3</h4>
-                            <p class="info-opcion">Si viene desde la Plaza de Puente Alto, tome Av. Concha y Toro hacia el sur, hasta llegar a calle Arturo Prat y doble hacia la izquierda. Luego, en calle Balmaceda, doble nuevamente a la izquierda y tome Av. Eyzaguirre doblando hacia la derecha y seguir por Av. Eyzaguirre hasta encontrarse con Camino al Volcán.</p>
-                        </div>
-                    </div>
+                    <?php }?>
+                    
                 </div>
             </div>
-            <!--info locomocion-->
-           <div class="container-fluid full-xs">
-                <div class="row">
-                    <div class="info-locomocion col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                       <!--logo auto-->
-                        <figure class="col-lg-2 col-sm-3">
-                            <img src="img/info-bus.png" alt="Logo bus" class="img-responsive hidden-xs text-center">
-                            <figcaption class="info-modo-title">
-                                <h4 class="text-center"> Locomoción colectiva</h4>
-                            </figcaption>
-                        </figure>
-                        <!--info auto-->
-                        <div class="info col-lg-10 col-sm-9">
-                            <h4 class="info-title">Opción 1</h4>
-                            <p class="info-opcion">En la estación de Metro <strong>Bellavista la Florida</strong> (Línea 5), dirigirse al trasbordo de buses interurbanos y tomar el Metrobus <strong>Nº 72</strong> con dirección a la Plaza de Armas de San José de Maipo.</p>
-                            <h4 class="info-title">Opción 2</h4>
-                            <p class="info-opcion">Otra opción es bajarse en la estación de Metro Las Mercedes (Línea 4), y en la salida a Vicuña Mackenna Poniente, tomar el colectivo Cajón del Maipo o el Metrobus Nº 72 con dirección a la Plaza de Armas de San José de Maipo.</p>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="btn-container col-lg-12">
+                    <button class="page-btn col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+                        Ver más localidades
+                    </button>
                 </div>
             </div>
+           
         </div>
     </section>
     
-
-    <?php include('php/mapa-local.php')?>
     <?php include('php/footer.php')?>
 
         <!--scripts-->

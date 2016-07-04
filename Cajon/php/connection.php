@@ -5,22 +5,24 @@ $user="nicolas_root";
 $pass="cajondelmaipodb";
 $database="nicolas_cajondb";
 
-$connection = new mysqli($host, $user, $pass, $database);
+$connect = new mysqli($host, $user, $pass, $database);
 
 
-if ($connection->connect_error) {
+/*if ($connection->connect_error) {
     die('Error de Conexión (' . $connection->connect_errno . ') '. $connection->connect_error);
 }else{
     echo 'Éxito... ' . $connection->host_info . "\n";
-}
+}*/
+
+
 
 //library
 
-    function formatFecha($fecha){
-        $meses = array(Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre);
-        list($fecha,$hora) = explode(" ", $fecha);
-        list($ano,$mes,$dia) = explode("-", $fecha);
-        return "$dia.".$meses[$mes-1].".$ano";
+    //utf8Encoder function
+    //http://stackoverflow.com/questions/4095899/utf8-encoding-problem-with-good-examples
+    function utf8Encoder($text){
+        $enc = mb_detect_encoding($text, "UTF-8,ISO-8859-1");
+        return iconv($enc, "UTF-8", $text);
     }
 
 

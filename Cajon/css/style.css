@@ -263,19 +263,38 @@ header .nav-primary .nav-option:hover,
     width: 100%;
     z-index: 0;
     padding-top: 180px;
-    background-size: cover;
 }
 
 .main-home{
     background: url(../img/header-home.jpg);
     background-attachment: fixed;
-    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main-info{
     background: url(../img/header-info.jpg);
     background-attachment: fixed;
-    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-localidades{
+    background: url(../img/header-localidades.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-localidad{
+    background: url(../img/header-localidad.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main .main-title,
@@ -391,7 +410,8 @@ header .nav-primary .nav-option:hover,
 
 /*content>informacion*/
 
-.content-info{
+.content-info,
+.content-localidades{
     background-color: #ebebeb;
 }
 
@@ -426,6 +446,76 @@ header .nav-primary .nav-option:hover,
 
 .content .info-title:first-child{
     margin-top: 0;
+}
+
+/*content>localidades*/
+.content .img-container{
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.img-container figure{
+    position: relative;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+.img-container figure figcaption{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.img-title{
+    margin: 43% 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px 0;
+    z-index: 5;
+}
+
+.img-title span{
+    font-size: 1.5em;
+}
+
+.img-container figure figcaption:hover{
+    transition: 0.4s;   
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+
+.img-container figure figcaption:hover .img-title{
+    background-color: rgba(0,0,0,0);
+}
+
+.btn-container{
+    overflow: hidden;
+    padding: 20px 0 10px 0;
+}
+
+.btn-container .page-btn{
+    background-color: transparent;
+    border: 2px solid #181b21;
+    padding: 10px 0;
+    color: #181b21;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.btn-container .page-btn:hover{
+    background-color: #181b21;
+    color: white;
+    transition: 0.4s;
 }
 
 /*FOOTER*/

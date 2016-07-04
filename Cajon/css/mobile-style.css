@@ -37,7 +37,8 @@
         height: 580px;
     }
     
-    .content .content-title{
+    .content .content-title,
+    .page-btn{
         font-size: 1.5em;
     }
     
@@ -56,6 +57,12 @@
         margin-top: 0;
         margin-bottom: 20px;
         font-size: 2em;
+    }
+    
+    /*content-localidades*/
+    .img-title{
+        font-size: 1em;
+        padding: 10px;
     }
     
     #home-content-uno figcaption h3{
