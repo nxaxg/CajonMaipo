@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/mobile-style.css">
     <!--font-->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
     <!--font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--favicon-->
@@ -107,58 +108,81 @@
     </header>
     <!--main-->
     <section class="main main-info">
-        <div class="container-fluid">
+        <div class="container-fluid full-xs">
             <div class="row">
                 <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Bienvenido al Cajón del Maipo
+                    Visita el Cajón del Maipo
                 </h1>
             </div>
             <div class="row">
                 <p class="main-bajada col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Bienvenido/a al sitio oficial de El Cajón del Maipo, dónde podrás
-conocer todos los atractivos que ofrece esta hermosa localidad,
-ubicada a pocos kilometros de la Región Metropolitana de Chile.
+                    Informate de las alternativas y modos de llegar a esta localidad.
+En esta sección encontrarás información útil y necesaria para
+conocer y visitar el Cajón del Maipo.
                 </p>
             </div>
             <div class="row">
                    <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 page-down text-center">
-                       <a href="#home-content-uno" class="fa fa-angle-down" id="page-down-icon" title="Going down"></a>
+                       <a href="#content" class="fa fa-angle-down" id="page-down-icon" title="Going down"></a>
                    </div>
             </div>
         </div>
     </section>
-    
-    <section id="home-content-uno">
-        <div class="container-fluid">
-            <figure class="home-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/min-localidades.jpg" alt="Localidades" class="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <figcaption>
-                    <div class="row">
-                        <h3 class="home-title-2 text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            Localidades
-                        </h3>
+    <!--content-->
+    <section id="content" class="content content-info">
+        <div class="container-fluid full-xs">
+            <div class="row">
+                <h2 class="content-title text-center col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">¿Cómo Llegar?</h2>
+            </div>
+            <!--info auto-->
+            <div class="container-fluid full-xs ">
+                <div class="row">
+                    <div class="info-auto col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                       <!--logo auto-->
+                        <figure class="col-lg-2 col-sm-3">
+                            <img src="img/logo-auto.png" alt="Logo automovil" class="img-responsive hidden-xs text-center">
+                            <figcaption class="info-modo-title">
+                                <h4 class="text-center"> Automovil</h4>
+                            </figcaption>
+                        </figure>
+                        <!--info auto-->
+                        <div class="info col-lg-10 col-sm-9 col-xs-12">
+                            <h4 class="info-title">Opción 1</h4>
+                            <p class="info-opcion">Si viene desde el centro de Santiago, debe tomar Av. Vicuña Mackenna, y doblar en Av. Departamental hacia el oriente, hasta llegar a Av. La Florida. Luego seguir derecho, hacia el sur por Av. La Florida hasta llegar a Camino al Volcán y detenerse en la localidad de destino.</p>
+                            <h4 class="info-title">Opción 2</h4>
+                            <p class="info-opcion">Si viene desde el oriente de Santiago, tiene dos alternativas. Una es por Av. Américo Vespucio. Si viene por la Autopista, abandónela por la salida Las Torres y doble hacia el oriente por Av. Departamental, hasta llegar a Av. La Florida. Luego, doble hacia el sur y siga derecho, por Av. La Florida hasta llegar a Camino al Volcán y detenerse en la localidad de destino.</p>
+                            <h4 class="info-title">Opción 3</h4>
+                            <p class="info-opcion">Si viene desde la Plaza de Puente Alto, tome Av. Concha y Toro hacia el sur, hasta llegar a calle Arturo Prat y doble hacia la izquierda. Luego, en calle Balmaceda, doble nuevamente a la izquierda y tome Av. Eyzaguirre doblando hacia la derecha y seguir por Av. Eyzaguirre hasta encontrarse con Camino al Volcán.</p>
+                        </div>
                     </div>
-                    <div class="row">
-                        <button class="home-button text-center col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                            Visita nuestras localidades <span class="fa fa-angle-right"></span>
-                        </button>
+                </div>
+            </div>
+            <!--info locomocion-->
+           <div class="container-fluid full-xs">
+                <div class="row">
+                    <div class="info-locomocion col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                       <!--logo auto-->
+                        <figure class="col-lg-2 col-sm-3">
+                            <img src="img/logo-bus.png" alt="Logo bus" class="img-responsive hidden-xs text-center">
+                            <figcaption class="info-modo-title">
+                                <h4 class="text-center"> Locomoción colectiva</h4>
+                            </figcaption>
+                        </figure>
+                        <!--info auto-->
+                        <div class="info col-lg-10 col-sm-9">
+                            <h4 class="info-title">Opción 1</h4>
+                            <p class="info-opcion">En la estación de Metro <strong>Bellavista la Florida</strong> (Línea 5), dirigirse al trasbordo de buses interurbanos y tomar el Metrobus <strong>Nº 72</strong> con dirección a la Plaza de Armas de San José de Maipo.</p>
+                            <h4 class="info-title">Opción 2</h4>
+                            <p class="info-opcion">Otra opción es bajarse en la estación de Metro Las Mercedes (Línea 4), y en la salida a Vicuña Mackenna Poniente, tomar el colectivo Cajón del Maipo o el Metrobus Nº 72 con dirección a la Plaza de Armas de San José de Maipo.</p>
+                        </div>
                     </div>
-                </figcaption>
-            </figure>
-            <figure class="home-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/min-actividades.jpg" alt="Actividades" class="img-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <figcaption>
-                    <h3 class="home-title-2 text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        Actividades
-                    </h3>
-                    <button class="home-button text-center col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        Vive nuestras actividades <span class="fa fa-angle-right"></span>
-                    </button>
-                </figcaption>
-            </figure>
+                </div>
+            </div>
         </div>
     </section>
+    
 
+    <?php include('php/mapa-local.php')?>
     <?php include('php/footer.php')?>
 
         <!--scripts-->

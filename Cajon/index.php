@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/mobile-style.css">
     <!--font-->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
     <!--font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--favicon-->
@@ -108,7 +109,7 @@
     </header>
     <!--main-->
     <section class="main main-home">
-        <div class="container-fluid">
+        <div class="container-fluid full-xs">
             <div class="row">
                 <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                     Bienvenido al Cajón del Maipo

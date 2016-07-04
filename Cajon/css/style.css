@@ -21,6 +21,10 @@ a:focus{
     color: inherit;
 }
 
+.full-xs{
+    padding: 0;    
+}
+
 /*HEADER*/
 
 header{
@@ -97,7 +101,7 @@ header .nav-second .lang:hover{
 /*header>nav-primary*/
 
 header .nav-primary{
-    top: 10px;
+    margin-top: 10px;
 }
 
 .nav-option{
@@ -265,13 +269,13 @@ header .nav-primary .nav-option:hover,
 .main-home{
     background: url(../img/header-home.jpg);
     background-attachment: fixed;
-    background-position: center;
+    background-position: center top;
 }
 
 .main-info{
     background: url(../img/header-info.jpg);
     background-attachment: fixed;
-    background-position: right;
+    background-position: center top;
 }
 
 .main .main-title,
@@ -360,8 +364,9 @@ header .nav-primary .nav-option:hover,
 
 /*CONTENT*/
 .content{
-    padding: 40px 0;
+    padding: 40px 0 50px 0;
     position: relative;
+    overflow: hidden;
 }
 
 .mapa-container{
@@ -384,6 +389,44 @@ header .nav-primary .nav-option:hover,
     background-color: black;
 }
 
+/*content>informacion*/
+
+.content-info{
+    background-color: #ebebeb;
+}
+
+.content-info .info-auto{
+    margin-top: 40px;
+    background-color: rgba(119, 132, 182, 0.5);
+    padding: 30px 0 20px 0;
+}
+
+.content-info .info-locomocion{
+    background-color: rgba(145, 161, 188, 0.5);
+    padding: 30px 0 20px 0;
+    margin-top: 20px;
+}
+
+.content p{
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.content .info-modo-title h4, .content .info-title{
+    text-transform: uppercase;
+    color: #181b21;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.content .info-title{
+    margin-top: 20px;
+}
+
+.content .info-title:first-child{
+    margin-top: 0;
+}
 
 /*FOOTER*/
 /*footer>subfooter*/

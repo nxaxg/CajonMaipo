@@ -15,7 +15,7 @@
     }
     
     .map-box{
-        height: 400px;
+        height: 300px;
     }
     
     footer .copyright{
@@ -37,6 +37,26 @@
         height: 580px;
     }
     
+    .content .content-title{
+        font-size: 1.5em;
+    }
+    
+    .content p{
+        font-size: 1em;
+    }
+    
+    /*content-info*/
+    
+    .content .info-auto,
+    .content .info-locomocion{
+        padding: 20px 0 25px 0;
+    }
+    
+    .content .info-modo-title h4{
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
     
     #home-content-uno figcaption h3{
         margin-top: 20%;
@@ -48,12 +68,9 @@
         font-size: 1.2em;
     }
     
-    .mapa-container .container-fluid{
-        padding: 0;
-    }
-    
     .main .main-title{
         font-size: 2em;
+        padding: 10px 2%;
     }
     
     .main .main-bajada{
