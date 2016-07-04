@@ -31,6 +31,7 @@ header{
     height: 95px;
     overflow: visible;
     transition: 0.5s;
+    z-index: 10;
 }
 
 /*header>logo*/
@@ -250,6 +251,139 @@ header .nav-primary .nav-option:hover,
     width: 80%;
     margin: 0 10%;
 }
+
+/*MAIN*/
+.main{
+    position: relative;
+    height: 700px;
+    width: 100%;
+    z-index: 0;
+    padding-top: 180px;
+    background-size: cover;
+}
+
+.main-home{
+    background: url(../img/header-home.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.main-info{
+    background: url(../img/header-info.jpg);
+    background-attachment: fixed;
+    background-position: right;
+}
+
+.main .main-title,
+.main .main-bajada{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.main .main-title{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 2.5em;
+    padding: 10px 0;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.main .main-bajada{
+    font-size: 1.2em;
+    position: relative;
+    padding: 10px 20%;
+    top: 40px;
+}
+
+.main .page-down{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 4em;
+    cursor: auto;
+    text-align: center;
+}
+
+.main .page-down a{
+    cursor: pointer;
+}
+
+/*home>content-uno*/
+#home-content-uno .container-fluid{
+    padding: 0;
+}
+
+#home-content-uno figure,
+#home-content-uno img{
+    padding: 0;
+}
+
+#home-content-uno figure{
+    position: relative;
+    overflow: hidden;
+}
+
+#home-content-uno figure figcaption{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+#home-content-uno figcaption h3{
+    margin: 20% 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#home-content-uno figcaption button{
+    margin-top: 20%;
+    padding: 10px 0;
+    font-size: 1.5em;
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid white;
+    color: black;
+}
+
+#home-content-uno figcaption button:hover{
+    background-color: white;
+    transition: 0.4s;
+}
+
+/*CONTENT*/
+.content{
+    padding: 40px 0;
+    position: relative;
+}
+
+.mapa-container{
+    background-color: #f4f2f1;
+}
+
+.content .content-title{
+    font-family: 'Roboto';
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #181b21;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.map-box{
+    margin-top: 40px;
+    height: 500px;
+    background-color: black;
+}
+
 
 /*FOOTER*/
 /*footer>subfooter*/

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Cajón del Maipo</title>
+    <title>Información | Cajón del Maipo</title>
     <!--btsrp-->
     <script src="js/jquery-1.11.3.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -57,8 +56,8 @@
                 <div class="nav-primary col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-0">
                     <nav>
                         <ul class="list-inline text-right">
-                            <li class="nav-option nav-selected"><a href="index.php">Home</a></li>
-                            <li class="nav-option"><a href="informacion.php">Información</a></li>
+                            <li class="nav-option"><a href="index.php">Home</a></li>
+                            <li class="nav-option nav-selected"><a href="informacion.php">Información</a></li>
                             <li class="nav-option"><a href="localidades.php">Localidades</a></li>
                             <li class="nav-option"><a href="actividades.php">Actividades</a></li>
                             <li class="nav-option"><a href="contacto.php">Contacto</a></li>
@@ -95,8 +94,8 @@
                     <span class="fa fa-navicon menu-icon" title="Menú"></span>
                 </div>
                 <ul class="burguer-menu-mob list-unstyled show-xs show-sm">
-                    <li class="menu-option menu-sel"><a href="index.php">Home</a></li>
-                    <li class="menu-option"><a href="informacion.php">Información</a></li>
+                    <li class="menu-option"><a href="index.php">Home</a></li>
+                    <li class="menu-option menu-sel"><a href="informacion.php">Información</a></li>
                     <li class="menu-option"><a href="localidades.php">Localidades</a></li>
                     <li class="menu-option"><a href="actividades.php">Actividades</a></li>
                     <li class="menu-option"><a href="contacto.php">Contacto</a></li>
@@ -107,7 +106,7 @@
         </div>
     </header>
     <!--main-->
-    <section class="main main-home">
+    <section class="main main-info">
         <div class="container-fluid">
             <div class="row">
                 <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
@@ -140,7 +139,7 @@ ubicada a pocos kilometros de la Región Metropolitana de Chile.
                         </h3>
                     </div>
                     <div class="row">
-                        <button class="home-button text-center col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0" onclick="location.href='localidades.php'" title="Ir a Localidades">
+                        <button class="home-button text-center col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                             Visita nuestras localidades <span class="fa fa-angle-right"></span>
                         </button>
                     </div>
@@ -152,16 +151,14 @@ ubicada a pocos kilometros de la Región Metropolitana de Chile.
                     <h3 class="home-title-2 text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         Actividades
                     </h3>
-                    <button class="home-button text-center col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0" onclick="location.href='actividades.php'" title="Ir a Actividades">
+                    <button class="home-button text-center col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                         Vive nuestras actividades <span class="fa fa-angle-right"></span>
                     </button>
                 </figcaption>
             </figure>
         </div>
     </section>
-    
-    
-    <?php include ('php/mapa-local.php');?>
+
     <?php include('php/footer.php')?>
 
         <!--scripts-->
@@ -169,7 +166,6 @@ ubicada a pocos kilometros de la Región Metropolitana de Chile.
         <script src="js/menus.js"></script>
         <script src="js/smoothy.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        
 </body>
 
 </html>
