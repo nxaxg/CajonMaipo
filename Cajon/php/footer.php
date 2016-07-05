@@ -18,16 +18,16 @@
         </div>
     </div>
     <div class="footerend container-fluid">
-        <figure class="logo-footer col-lg-2 hidden- hidden-sm hidden-xs">
+        <figure class="logo-footer col-lg-2 col-md-2 hidden-sm hidden-xs">
             <a href="#" title="Cajón del Maipo">
                 <img src="img/logo-big-white.png" class="hidden-xs" alt="Logo Cajón del maipo white">
             </a>
         </figure>
         <p class="copyright col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
-            &copy;Copyright <a href="#" title="Cajón del Maipo">Cajón del Maipo</a> 2016
+            &copy;<a href="#" title="Cajón del Maipo">Cajón del Maipo</a> 2016
         </p>
         <p class="coder col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
-            Coded by <span class="fa fa-envira"></span><a href="#" title="Cielosordo">Cielosordo</a>
+            Coded by <span class="fa fa-envira"></span><a href="https://github.com/nxaxg" title="Cielosordo" target="_blank">Cielosordo</a>
         </p>
     </div>
 </footer>

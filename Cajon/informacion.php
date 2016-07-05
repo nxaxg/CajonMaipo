@@ -165,13 +165,13 @@ conocer y visitar el Cajón del Maipo.
                         <figure class="col-lg-2 col-sm-3">
                             <img src="img/info-bus.png" alt="Logo bus" class="img-responsive hidden-xs text-center">
                             <figcaption class="info-modo-title">
-                                <h4 class="text-center"> Locomoción colectiva</h4>
+                                <h4 class="text-center">Locomoción colectiva</h4>
                             </figcaption>
                         </figure>
                         <!--info auto-->
                         <div class="info col-lg-10 col-sm-9">
                             <h4 class="info-title">Opción 1</h4>
-                            <p class="info-opcion">En la estación de Metro <strong>Bellavista la Florida</strong> (Línea 5), dirigirse al trasbordo de buses interurbanos y tomar el Metrobus <strong>Nº 72</strong> con dirección a la Plaza de Armas de San José de Maipo.</p>
+                            <p class="info-opcion">En la estación de Metro Bellavista la Florida (Línea 5), dirigirse al trasbordo de buses interurbanos y tomar el Metrobus Nº 72 con dirección a la Plaza de Armas de San José de Maipo.</p>
                             <h4 class="info-title">Opción 2</h4>
                             <p class="info-opcion">Otra opción es bajarse en la estación de Metro Las Mercedes (Línea 4), y en la salida a Vicuña Mackenna Poniente, tomar el colectivo Cajón del Maipo o el Metrobus Nº 72 con dirección a la Plaza de Armas de San José de Maipo.</p>
                         </div>

@@ -4,8 +4,16 @@ if(!isset($_SESSION))session_start();
         $_SESSION[volver]=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_ STRING']; header("Location: ../../login.php");
 }
 
-$queryselect = "select * from `actividades` where 1 order by `id_actividad` asc";
+$queryselect = "SELECT * FROM `localidades` where `codigo` = '$_GET[code]'";
 $result = $connect->query($queryselect);
+$localidad = $result->fetch_assoc();
+
+if(isset($_POST[modificar]) && $_POST[modificar]=="modificar"){
+    $querymod = "UPDATE `localidades` set `titulo`='$_POST[titulo]', `descripcion`='$_POST[descripcion]', `coordenadax`='$_POST[coordenadax]', `coordenaday`='$_POST[coordenaday]' where `id_localidad`='$localidad[id_localidad]'";
+    $connect->query($querymod);
+    $ID = $connect->insert_id; 
+    if($connect->query($querymod))header("Location: listado-localidades.php");   
+}
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +22,7 @@ $result = $connect->query($queryselect);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Listado de actividades | Cajón del Maipo CM</title>
+    <title>Modificar localidad | Cajón del Maipo CM</title>
     <!--btsrp-->
     <script src="../../js/jquery-1.11.3.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -66,8 +74,8 @@ $result = $connect->query($queryselect);
                         <ul class="list-inline text-right">
                             <li class="nav-option"><a href="../home.php">Home</a></li>
                             <li class="nav-option"><a href="../usuarios/listado-usuarios.php">Usuarios</a></li>
-                            <li class="nav-option"><a href="../localidades/listado-localidades.php">Localidades</a></li>
-                            <li class="nav-option nav-selected"><a href="listado-actividades.php">Actividades</a></li>
+                            <li class="nav-option nav-selected"><a href="listado-localidades.php">Localidades</a></li>
+                            <li class="nav-option"><a href="../actividades/listado-actividades.php">Actividades</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -103,8 +111,8 @@ $result = $connect->query($queryselect);
                 <ul class="burguer-menu-mob list-unstyled show-xs show-sm">
                     <li class="menu-option"><a href="../home.php">Home</a></li>
                     <li class="menu-option"><a href="../usuarios/listado-usuarios.php">Usuarios</a></li>
-                    <li class="menu-option"><a href="../localidades/listado-localidades.php">Localidades</a></li>
-                    <li class="menu-option menu-sel"><a href="listado-actividades.php">Actividades</a></li>
+                    <li class="menu-option menu-sel"><a href="listado-localidades.php">Localidades</a></li>
+                    <li class="menu-option"><a href="../localidades/listado-actividades.php">Actividades</a></li>
                     <hr class="menu-divider">
                     <li class="menu-user">Bienvenido <strong><?php echo $_SESSION[user_name]; ?></strong></li>
                     <li class="menu-option"><a href="../../logout.php">Logout</a></li>
@@ -117,28 +125,26 @@ $result = $connect->query($queryselect);
         <div class="container-fluid full-xs">
             <div class="row">
                 <h1 class="main2-title col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-                    Listado de actividades
+                    Modificar localidad
                 </h1>
             </div>
             <div class="row">
-                <table class="table-adm col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Título</th>
-                            <th class="text-center hidden-xs">Categoría</th>
-                            <th class="text-center">Modificar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php while($actividad = $result->fetch_assoc()){?>
-                        <tr class="text-center">
-                            <td><?php echo $actividad[titulo];?></td>
-                            <td class="hidden-xs"><?php echo $actividad[categoria];?></td>
-                            <td><a href="modificar-actividad.php?code=<?php echo $actividad[codigo];?>"><span class="fa fa-edit"></span></a></td>
-                        </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                <form action="" method="post" class="form modificar-form col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                   <!--titulo-->
+                    <label for="titulo" class="col-lg-2 col-lg-offset-1 col-sm-2 col-sm-offset-1 col-xs-12 text-right">Título:</label>
+                    <input type="text" id="titulotxt" name="titulo" value="<?php echo $localidad[titulo];?>" class="input-form col-lg-8 col-sm-8 col-xs-12" required>
+                    <!--descripcion-->
+                    <label for="descripcion" class="col-lg-2 col-lg-offset-1 col-sm-2 col-sm-offset-1 col-xs-12 text-right">Descripción:</label>
+                    <textarea id="desctxt" name="descripcion" class="input-form col-lg-8 col-sm-8 col-xs-12" required><?php echo utf8Encoder($localidad[descripcion]);?></textarea>
+                    <fieldset class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2">
+                        <legend>Coordenadas de Google Maps</legend>
+                        <label for="coordenadax" class="col-lg-4 col-lg-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 text-right">Coordenada X:</label>
+                        <input type="text" id="coordxtxt" name="coordenadax" value="<?php echo $localidad[coordenadax];?>" class="input-form col-lg-6 col-sm-6 col-xs-12" required>
+                        <label for="coordenaday" class="col-lg-4 col-lg-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 text-right">Coordenada Y:</label>
+                        <input type="text" id="coordxtxt" name="coordenaday" value="<?php echo $localidad[coordenaday];?>" class="input-form col-lg-6 col-sm-6 col-xs-12" required>
+                    </fieldset>
+                    <input type="submit" name="modificar" value="modificar" class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-12 form-btn cool-btn">
+                </form>
             </div>
         </div>
     </section>

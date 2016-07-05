@@ -147,7 +147,7 @@ if((isset($_POST[user]) && $_POST[user]<>"") && (isset($_POST[pass]) && $_POST[p
             
             <div class="row">
                 <?php if($error){?>
-                    <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-2 col-xs-12 mensaje-error text-center">
+                    <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 mensaje-error text-center">
                         <?php echo $error;?> <span class="fa fa-thumbs-o-down"></span>
                     </div>
                 <?php } ?>

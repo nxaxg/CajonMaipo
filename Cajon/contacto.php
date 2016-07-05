@@ -149,11 +149,11 @@ if(isset($_POST[enviar]) && $_POST[enviar]="enviar"){
             
             <div class="row">
                 <?php if($error){?>
-                    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm offset-1 col-xs-12 mensaje-error text-center">
+                    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 mensaje-error text-center">
                         Error al intentar enviar su mensaje <span class="fa fa-thumbs-o-down"></span>
                     </div>
                 <?php }else if($ok){ ?>
-                    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm offset-1 col-xs-12 mensaje-ok text-center">
+                    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 mensaje-ok text-center">
                         Su mensaje ha sido enviado <span class="fa fa-thumbs-o-up"></span>
                     </div>
                 <?php } ?>

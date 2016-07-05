@@ -30,7 +30,10 @@
 }
 
 @media only screen and (max-width:768px){
-    
+    .modificar-form label{
+        float: left;
+        text-align: left;
+    }
     
     .main{
         padding-top: 100px;

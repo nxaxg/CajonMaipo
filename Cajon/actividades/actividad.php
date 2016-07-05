@@ -5,10 +5,10 @@ $result = $connect->query($queryselect);
 $actividad = $result->fetch_assoc();
 
 ?>
-    <!DOCTYPE html>
-    <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>
@@ -29,9 +29,9 @@ $actividad = $result->fetch_assoc();
         <link rel="stylesheet" href="../css/font-awesome.min.css">
         <!--favicon-->
         <link rel="shortcut icon" type="image/x-icon" href="../img/logo-sticky-black.png">
-    </head>
+</head>
 
-    <body>
+<body>
         <header class="normal-header">
             <!--desktop header-->
             <div id="desktop-hdr" class="container-fluid col-lg-12 col-md-12 hidden-sm hidden-xs">
@@ -150,9 +150,9 @@ $actividad = $result->fetch_assoc();
                             <div class="row">
                                 <div id="slider-mini">
                                     <ul>
-                                       <?php for($x=0; $x<3; $x++){?>
-                                        <li><img src="../img/min-<?php echo $actividad[codigo];?>-00.jpg" alt=""></li>
-                                        <?php } ?>
+                                        <?php for($x=0; $x<3; $x++){?>
+                                            <li><img src="../img/min-<?php echo $actividad[codigo];?>-00.jpg" alt="Imágen <?php echo $actividad[titulo] .' '. $x;?>"></li>
+                                            <?php } ?>
                                     </ul>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ $actividad = $result->fetch_assoc();
                                 </div>
                             </div>
                         </div>
-                       <?php include('../php/empresas.php');?>
+                        <?php include('../php/empresas.php');?>
                     </div>
                 </div>
             </div>
@@ -189,6 +189,5 @@ $actividad = $result->fetch_assoc();
             <script src="../js/sliderAction.js"></script>
             <script src="../js/unslider-min.js"></script>
 
-    </body>
-
-    </html>
+</body>
+</html>

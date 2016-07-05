@@ -117,7 +117,7 @@ $result = $connect->query($queryselect);
         <div class="container-fluid full-xs">
             <div class="row">
                 <h1 class="main2-title col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-                    Listado de actividades
+                    Listado de localidades
                 </h1>
             </div>
             <div class="row">
@@ -132,7 +132,7 @@ $result = $connect->query($queryselect);
                         <?php while($localidad = $result->fetch_assoc()){?>
                         <tr class="text-center">
                             <td><?php echo $localidad[titulo];?></td>
-                            <td><a href="modificar-localidad.php?id_loc=<?php echo $localidad[id_localidad];?>" title="Modificar"><span class="fa fa-edit"></span></a></td>
+                            <td><a href="modificar-localidad.php?code=<?php echo $localidad[codigo];?>" title="Modificar"><span class="fa fa-edit"></span></a></td>
                         </tr>
                         <?php } ?>
                     </tbody>

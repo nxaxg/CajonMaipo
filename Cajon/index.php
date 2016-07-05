@@ -162,7 +162,7 @@ ubicada a pocos kilometros de la Región Metropolitana de Chile.
     </section>
     
     
-    <?php include ('php/mapa-local.php');?>
+    <?php include('php/mapa-local.php');?>
     <?php include('php/footer.php')?>
 
         <!--scripts-->

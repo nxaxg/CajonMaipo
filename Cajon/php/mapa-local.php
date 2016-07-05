@@ -20,6 +20,7 @@
                 </script>
                 <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
                 <!--api key -->
+                <!--https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es#key-->
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpNu7ZGW1ukwAf6mLFNnFHPl-6Jqz-fTw" type="text/javascript" hidden></script>
             </div>
         </div>

@@ -79,7 +79,7 @@ if(isset($_POST[agregar]) && $_POST[agregar]=="agregar"){
                             <li class="nav-option"><a href="../home.php">Home</a></li>
                             <li class="nav-option nav-selected"><a href="listado-usuarios.php">Usuarios</a></li>
                             <li class="nav-option"><a href="../localidades/listado-localidades.php">Localidades</a></li>
-                            <li class="nav-option"><a href="../actividades/actividades.php">Actividades</a></li>
+                            <li class="nav-option"><a href="../actividades/listado-actividades.php">Actividades</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -116,7 +116,7 @@ if(isset($_POST[agregar]) && $_POST[agregar]=="agregar"){
                     <li class="menu-option"><a href="../home.php">Home</a></li>
                     <li class="menu-option menu-sel"><a href="listado-usuarios.php">Usuarios</a></li>
                     <li class="menu-option"><a href="../localidades/listado-localidades.php">Localidades</a></li>
-                    <li class="menu-option"><a href="../localidades/listado-actividades.php">Actividades</a></li>
+                    <li class="menu-option"><a href="../actividades/listado-actividades.php">Actividades</a></li>
                     <hr class="menu-divider">
                     <li class="menu-user">Bienvenido <strong><?php echo $_SESSION[user_name]; ?></strong></li>
                     <li class="menu-option"><a href="../../logout.php">Logout</a></li>
