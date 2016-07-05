@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //starting function
-    $(".lang-menu").hide();
     $(".lang-menu-mob").hide();
+    $(".lang-menu").hide();
     $(".burguer-menu-mob").hide();
     
     //lang-btn animation
