@@ -22,7 +22,8 @@ a:focus{
 }
 
 .full-xs{
-    padding: 0;    
+    padding-left: 0;    
+    padding-right: 0;    
 }
 
 /*HEADER*/
@@ -36,6 +37,10 @@ header{
     overflow: visible;
     transition: 0.5s;
     z-index: 10;
+}
+
+header strong{
+    text-transform: capitalize;
 }
 
 /*header>logo*/
@@ -96,6 +101,14 @@ header .nav-second .login:hover,
 header .nav-second .lang:hover{
     color: #181b21;
     background-color: white;
+}
+
+header .nav-second .login-sel{
+    background-color: white;
+}
+
+header .nav-second .login-sel a{
+    color: #181b21;
 }
 
 /*header>nav-primary*/
@@ -297,6 +310,30 @@ header .nav-primary .nav-option:hover,
     background-position: center;
 }
 
+.main-actividades{
+    background: url(../img/header-actividades.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-actividad{
+    background: url(../img/header-actividad.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-home-cm{
+    background: url(../img/header-homecm.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .main .main-title,
 .main .main-bajada{
     background-color: rgba(0,0,0,0.5);
@@ -319,7 +356,7 @@ header .nav-primary .nav-option:hover,
     top: 40px;
 }
 
-.main .page-down{
+.page-down{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -330,7 +367,7 @@ header .nav-primary .nav-option:hover,
     text-align: center;
 }
 
-.main .page-down a{
+.page-down a{
     cursor: pointer;
 }
 
@@ -518,6 +555,125 @@ header .nav-primary .nav-option:hover,
     transition: 0.4s;
 }
 
+/*content-actividades*/
+.content-act-airelibre{
+    background-color: #f5f2f1;
+}
+
+.content-act-aventura{
+    background-color: #ededed;
+}
+
+.content-act-salud{
+    background-color: #dedede;
+}
+
+.content-actividad{
+    padding: 20px 0;
+}
+
+.content-actividad .left-actividad {
+    padding: 0 20px;
+}
+
+#slider-mini{
+    max-height: 400px;
+}
+
+#slider-mini img{
+    width: 100%;
+    bottom: 0;
+}
+
+.content-desc{
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.sharebox{
+    background-color: rgba(24, 27, 33, 0.8);
+    padding: 0;
+}
+
+.sharebox h3{
+    margin: 0;
+    padding: 15px 5px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.sharebox span{
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.sharebox span:hover{
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+.sharebox .fb-share{
+    background-color: #3d3de2;
+}
+
+.sharebox .tw-share{
+    background-color: #7ebfea;
+}
+
+.sharebox .mail-share{
+    background-color: #d54853;
+}
+
+.sharebox .rss-share{
+    background-color: #e6ad46;
+}
+
+.right-actividad{
+    padding: 0 10px;
+    background-color: rgba(145, 161, 188, 0.2);
+}
+
+.right-actividad h3{
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.right-actividad .empresa-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: rgba(145, 161, 188, 0.4);
+    color: #181b21;
+}
+
+.empresa-box h4{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.empresa-box span{
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.empresa-box a{
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.1em;
+    font-weight: light;
+}
+
+.empresa-box a:hover{
+    text-decoration: line-through;
+}
+
 /*FOOTER*/
 /*footer>subfooter*/
 footer{
@@ -541,6 +697,96 @@ footer .rrss span:hover{
     color: white;
 }
 
+/*main2*/
+.main2{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding: 120px 0 50px 0;
+    background-color: #f3f1f0;
+}
+
+.main2-title{
+    background-color: #181b21;
+    color: white;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.form{
+    overflow: hidden;
+    background-color: #dcdcdc;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.input-form-50{
+    width: 49%;
+    margin-right: 2%;
+}
+
+.input-form,
+.input-form-50{
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 0;
+    font-weight: normal;
+    font-size: 1em;
+    resize: none;
+}
+
+.input-form:focus,
+.input-form-50:focus{
+    outline: 2px solid rgba(24, 27, 33, 0.8);
+}
+
+.input-form-50:nth-child(even){
+    margin-right: 0;
+}
+
+.login-form .input-form{
+    margin-bottom: 30px;
+    padding: 15px 10px;
+}
+
+.login-form .form-btn{
+    margin-top: 30px;
+}
+
+.form-btn{
+    background-color: transparent;
+    color: #181b21;
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: 2px solid #181b21;
+}
+
+.form-btn:hover{
+    background-color: #181b21;
+    color: white;
+    transition: 0.4s;
+}
+
+.mensaje-error,
+.mensaje-ok{
+    padding: 20px 10px;
+    margin-top: 20px;
+    color: white;
+}
+
+.mensaje-error{
+    background-color: #dd4e4e;
+}
+
+.mensaje-ok{
+    background-color: #4bb46b;
+}
 /*footer>footerend*/
 footer .footerend{
     background-color: #181b21;

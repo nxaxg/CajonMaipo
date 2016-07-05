@@ -1,8 +1,8 @@
 <?php require_once('../php/connection.php');
 
-$queryselect = "select * from `localidades` where `codigo`='$_GET[code]';";
+$queryselect = "select * from `actividades` where `codigo`='$_GET[code]';";
 $result = $connect->query($queryselect);
-$localidad = $result->fetch_assoc();
+$actividad = $result->fetch_assoc();
 
 ?>
     <!DOCTYPE html>
@@ -11,13 +11,17 @@ $localidad = $result->fetch_assoc();
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <title><? echo $localidad[titulo];?> | Cajón del Maipo</title>
+        <title>
+            <?php echo $actividad[titulo];?> | Cajón del Maipo</title>
         <!--btsrp-->
         <script src="../js/jquery-1.11.3.js"></script>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!--site-->
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/mobile-style.css">
+        <link rel="stylesheet" href="../css/unslider.css">
+        <link rel="stylesheet" href="../css/unslider-dots.css">
+
         <!--font-->
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
@@ -67,8 +71,8 @@ $localidad = $result->fetch_assoc();
                             <ul class="list-inline text-right">
                                 <li class="nav-option"><a href="../index.php">Home</a></li>
                                 <li class="nav-option"><a href="../informacion.php">Información</a></li>
-                                <li class="nav-option nav-selected"><a href="../localidades.php">Localidades</a></li>
-                                <li class="nav-option"><a href="../actividades.php">Actividades</a></li>
+                                <li class="nav-option"><a href="../localidades.php">Localidades</a></li>
+                                <li class="nav-option nav-selected"><a href="../actividades.php">Actividades</a></li>
                                 <li class="nav-option"><a href="../contacto.php">Contacto</a></li>
                             </ul>
                         </nav>
@@ -105,8 +109,8 @@ $localidad = $result->fetch_assoc();
                     <ul class="burguer-menu-mob list-unstyled show-xs show-sm">
                         <li class="menu-option"><a href="../index.php">Home</a></li>
                         <li class="menu-option"><a href="../informacion.php">Información</a></li>
-                        <li class="menu-option menu-sel"><a href="../localidades.php">Localidades</a></li>
-                        <li class="menu-option"><a href="../actividades.php">Actividades</a></li>
+                        <li class="menu-option"><a href="../localidades.php">Localidades</a></li>
+                        <li class="menu-option menu-sel"><a href="../actividades.php">Actividades</a></li>
                         <li class="menu-option"><a href="../contacto.php">Contacto</a></li>
                         <hr class="menu-divider">
                         <li class="menu-option"><a href="../login.php">Login</a></li>
@@ -115,17 +119,17 @@ $localidad = $result->fetch_assoc();
             </div>
         </header>
         <!--main-->
-        <section class="main main-localidad">
+        <section class="main main-actividad">
             <div class="container-fluid full-xs">
                 <div class="row">
                     <!--page title-->
                     <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    <?php echo $localidad[titulo];?>
+                    <?php echo $actividad[titulo];?>
                 </h1>
                 </div>
                 <div class="row">
                     <p class="main-bajada col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                        <?php echo utf8Encoder($localidad[descripcion]);?>
+                        <?php echo utf8Encoder($actividad[bajada]);?>
                     </p>
                 </div>
                 <div class="row">
@@ -137,85 +141,54 @@ $localidad = $result->fetch_assoc();
         </section>
 
         <!--content-->
-        <section id="content" class="content content-localidades">
-            <div class="container-fluid full-xs">
+        <section id="content" class="content content-actividad">
+            <div class="container-fluid">
                 <div class="row">
-                    <h2 class="content-title text-center col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">Galería de imágenes</h2>
-                </div>
-                <div class="row">
-                    <div class="img-container col-lg-12 col-lg-offset-0 full-xs">
-                        <!--php callback-->
-                        <?php for($x=0; $x<4; $x++){?>
-                            <!--localidad-->
-                            <figure class="col-lg-3 col-sm-3 col-xs-6 full-xs">
-                                <!--img localidad-->
-                                <img src="../img/min-<?php echo $localidad[codigo];?>-0<?php echo $x;?>.jpg" class="img-responsive" alt="Localidad <?php echo $localidad[titulo];?>">
-                                <!--link img-->
-                                <a href="#" title="Localidad <?php echo $localidad[titulo];?>" data-toggle="modal" data-target="#imgModal-<?php echo $x;?>">
-                                    <figcaption class="text-center">
-                                        <div class="row">
-                                            <!--titulo localidad-->
-                                            <h3 class="col-lg-12 img-title">
-                                                <span class="fa fa-eye"></span>
-                                            </h3>
-                                        </div>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                            <!--img-modal-->
-                            <div id="imgModal-<?php echo $x;?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" title="<?php echo $localidad[titulo]?>">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-body">
-                                            <img src="../img/img-<?php echo $localidad[codigo];?>-0<?php echo $x;?>.jpg" class="img-responsive">
-                                        </div>
-                                    </div>
+                    <div class="container-fluid full-xs">
+                        <!--left side-->
+                        <div class="left-actividad col-lg-6 col-sm-6 col-xs-12 full-xs">
+                            <div class="row">
+                                <div id="slider-mini">
+                                    <ul>
+                                       <?php for($x=0; $x<3; $x++){?>
+                                        <li><img src="../img/min-<?php echo $actividad[codigo];?>-00.jpg" alt=""></li>
+                                        <?php } ?>
+                                    </ul>
                                 </div>
                             </div>
-                            <!---->
-                            <?php }?>
-
+                            <div class="row">
+                                <p class="content-desc">
+                                    <?php echo utf8Encoder($actividad[descripcion]); ?>
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="sharebox col-lg-12 col-sm-12 col-xs-12 full-xs">
+                                    <h3 class="col-lg-4 col-sm-12 col-xs-12">Compartir:</h3>
+                                    <span class="col-lg-2 col-sm-3 col-xs-3 fb-share fa fa-facebook text-center"></span>
+                                    <span class="col-lg-2 col-sm-3 col-xs-3 tw-share fa fa-twitter text-center"></span>
+                                    <span class="col-lg-2 col-sm-3 col-xs-3 mail-share fa fa-envelope-o text-center"></span>
+                                    <span class="col-lg-2 col-sm-3 col-xs-3 rss-share fa fa-rss text-center"></span>
+                                </div>
+                            </div>
+                        </div>
+                       <?php include('../php/empresas.php');?>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="content mapa-container">
-            <div class="container-fluid full-xs">
-                <div class="row">
-                    <h2 class="content-title text-center col-lg-2 col-lg-offset-5 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">Visitanos</h2>
-                    <div id="mapa-localidad" class="map-box col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                        <script>
-                            function initMap() {
-                                var mapDiv = document.getElementById('mapa-localidad');
-                                var coord = new google.maps.LatLng(<?php echo $localidad[coordenadax];?>, <?php echo $localidad[coordenaday];?>);
-                                var marker = new google.maps.Marker({
-                                    position: coord
-                                , });
-                                var map = new google.maps.Map(mapDiv, {
-                                    center: coord
-                                    , zoom: 10
-                                    , scrollwheel: false
-                                });
-                                marker.setMap(map);
-                            }
-                        </script>
-                        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-                        <!--api key -->
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpNu7ZGW1ukwAf6mLFNnFHPl-6Jqz-fTw" type="text/javascript" hidden></script>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <?php include('../php/footer-int.php')?>
 
             <!--scripts-->
-            <script src="../js/img-modal.js"></script>
             <script src="../js/sticky.js"></script>
             <script src="../js/menus.js"></script>
             <script src="../js/smoothy.js"></script>
             <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/sliderAction.js"></script>
+            <script src="../js/unslider-min.js"></script>
+
     </body>
 
     </html>
