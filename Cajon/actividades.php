@@ -59,7 +59,7 @@ $result_salud = $connect->query($queryselect_salud);
                                 <li class="lang-option lang-sel"><a href="#">Español</a></li>
                                 <li class="lang-option"><a href="#">Inglés</a></li>
                                 <li class="lang-option"><a href="#">Alemán</a></li>
-                                <li class="lang-option"><a href="#">Portugés</a></li>
+                                <li class="lang-option"><a href="#">Portugués</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -98,7 +98,7 @@ $result_salud = $connect->query($queryselect_salud);
                     <li class="lang-option lang-sel"><a href="#">Español</a></li>
                     <li class="lang-option"><a href="#">Inglés</a></li>
                     <li class="lang-option"><a href="#">Alemán</a></li>
-                    <li class="lang-option"><a href="#">Portugés</a></li>
+                    <li class="lang-option"><a href="#">Portugués</a></li>
                 </ul>
                 <!--menu-->
                 <div class="mob-menu-btn col-sm-1 col-xs-2 text-center">

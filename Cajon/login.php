@@ -4,7 +4,7 @@ if(!isset($_SESSION))session_start();
 
 
 if((isset($_POST[user]) && $_POST[user]<>"") && (isset($_POST[pass]) && $_POST[pass]<>"") ){
-    $query="SELECT * FROM usuarios where username='$_POST[user]' AND password='$_POST[pass]'";
+    $query="SELECT * FROM `usuarios` where username ='$_POST[user]' AND password='$_POST[pass]'";
     $resultado=$connect->query($query);
     
     if($total = $resultado->num_rows){
@@ -71,7 +71,7 @@ if((isset($_POST[user]) && $_POST[user]<>"") && (isset($_POST[pass]) && $_POST[p
                                 <li class="lang-option lang-sel"><a href="#">Español</a></li>
                                 <li class="lang-option"><a href="#">Inglés</a></li>
                                 <li class="lang-option"><a href="#">Alemán</a></li>
-                                <li class="lang-option"><a href="#">Portugés</a></li>
+                                <li class="lang-option"><a href="#">Portugués</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -110,7 +110,7 @@ if((isset($_POST[user]) && $_POST[user]<>"") && (isset($_POST[pass]) && $_POST[p
                     <li class="lang-option lang-sel"><a href="#">Español</a></li>
                     <li class="lang-option"><a href="#">Inglés</a></li>
                     <li class="lang-option"><a href="#">Alemán</a></li>
-                    <li class="lang-option"><a href="#">Portugés</a></li>
+                    <li class="lang-option"><a href="#">Portugués</a></li>
                 </ul>
                 <!--menu-->
                 <div class="mob-menu-btn col-sm-1 col-xs-2 text-center">
