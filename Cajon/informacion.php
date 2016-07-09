@@ -142,7 +142,7 @@ conocer y visitar el Cajón del Maipo.
                         <figure class="col-lg-2 col-sm-3">
                             <img src="img/info-auto.png" alt="Logo automovil" class="img-responsive hidden-xs text-center">
                             <figcaption class="info-modo-title">
-                                <h4 class="text-center"> Automovil</h4>
+                                <h4 class="text-center"> Automóvil</h4>
                             </figcaption>
                         </figure>
                         <!--info auto-->
