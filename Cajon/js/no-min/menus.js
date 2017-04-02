@@ -4,6 +4,15 @@ $(document).ready(function () {
     $(".lang-menu").hide();
     $(".burguer-menu-mob").hide();
 
+    $('section').click(function(){
+        $(".lang-menu-mob").slideUp();
+        $(".lang-menu").slideUp();
+        $(".burguer-menu-mob").slideUp();
+
+        $(".menu-icon").removeClass('burger-menu-action');
+        $(".lang-icon").removeClass('lang-menu-action');
+    });
+
     //lang-btn animation
     $(".lang").click(function () {
         $(".lang-menu").slideToggle();

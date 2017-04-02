@@ -3,31 +3,11 @@ if(!isset($_SESSION))session_start();
     if(!$_SESSION[user_id]){
         $_SESSION[volver]=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_ STRING']; header("Location: ../login.php");
 }
+global $page;
+$page = 'Administrador';
 
+require_once('../php/header-meta-int.php');
 ?>
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>CM | Cajón del Maipo</title>
-    <!--btsrp-->
-    <script src="../js/jquery-1.11.3.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!--site-->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/mobile-style.css">
-    <!--font-->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
-    <!--font awesome-->
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <!--favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/logo-sticky-black.png">
-</head>
-
-<body>
     <header class="normal-header">
         <!--desktop header-->
         <div id="desktop-hdr" class="container-fluid col-lg-12 col-md-12 hidden-sm hidden-xs">
@@ -113,25 +93,15 @@ if(!isset($_SESSION))session_start();
     <section class="main main-home-cm">
         <div class="container-fluid full-xs">
             <div class="row">
-                <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Bienvenido/a <?php echo $_SESSION[user_name];?>
-                </h1>
-            </div>
-            <div class="row">
-                <p class="main-bajada col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Bienvenido/a al Administrador de contenidos de Cajón del Maipo.
-                </p>
+                <div class="col-lg-8 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-1 col-xs-offset-0 text-center">
+                    <h1 class="main-title">
+                        Bienvenido/a <?php echo $_SESSION[user_name];?>
+                    </h1>
+                    <p class="main-bajada text-center">
+                        Bienvenido/a al Administrador de contenidos de Cajón del Maipo.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <?php include('../php/footer-int.php');?>
-
-        <!--scripts-->
-        <script src="../js/menus.js"></script>
-        <script src="../js/sticky.js"></script>
-        <script src="../js/smoothy.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        
-</body>
-
-</html>
+<?php include('../php/footer-int.php');?>

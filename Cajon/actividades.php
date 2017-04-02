@@ -1,4 +1,8 @@
-<?php require_once('php/connection.php');
+<?php
+require_once('php/connection.php');
+
+global $page;
+$page = 'Actividades';
 
 $queryselect_aire = "select * from `cajondb_actividades` where `categoria`='Aire libre' order by `id_actividad` asc";
 $queryselect_aventura = "select * from `cajondb_actividades` where `categoria`='Aventura' order by `id_actividad` asc";
@@ -7,29 +11,8 @@ $result_aire = $connect->query($queryselect_aire);
 $result_aventura = $connect->query($queryselect_aventura);
 $result_salud = $connect->query($queryselect_salud);
 
+require_once('php/header-meta.php');
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Actividades | Cajón del Maipo</title>
-    <!--btsrp-->
-    <script src="js/jquery-1.11.3.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--site-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-style.css">
-    <!--font-->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
-    <!--font awesome-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!--favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo-sticky-black.png">
-</head>
-
-<body>
     <header class="normal-header">
         <!--desktop header-->
         <div id="desktop-hdr" class="container-fluid col-lg-12 col-md-12 hidden-sm hidden-xs">
@@ -39,19 +22,15 @@ $result_salud = $connect->query($queryselect_salud);
                         <img src="img/logo-big-white.png" alt="Logo cajón del maipo blanco">
                     </a>
                 </figure>
-                <div class="nav-second col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3">
+                <div class="nav-second col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-1">
                     <nav>
-                        <div class="search col-lg-6 col-md-5">
-                            <input type="text" class="search-input col-lg-10 col-md-10" placeholder="Buscar...">
-                            <span class="col-lg-2 col-md-2 fa fa-search"></span>
-                        </div>
-                        <div class="login col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-2">
+                        <div class="login col-md-2 col-md-offset-7 col-sm-4 col-sm-offset-3">
                             <a href="login.php">
                                 Login
                                 <span class="fa fa-user"></span>
                             </a>
                         </div>
-                        <div class="lang col-lg-2 col-md-2">
+                        <div class="lang col-md-2 col-sm-4">
                             Idioma
                             <span class="lang-icon fa fa-globe"></span>
                             <!--hidden menu-->
@@ -121,14 +100,12 @@ $result_salud = $connect->query($queryselect_salud);
         <div class="container-fluid full-xs">
             <div class="row">
                <!--page title-->
-                <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Vive nuestras actividades
-                </h1>
-            </div>
-            <div class="row">
-                <p class="main-bajada col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Estos lugares se caracterizan por estar insertos en amplios bosques de flora nativa, con paisajes naturales de gran atractivo, cercanos o al lado de la rivera del Río Maipo, con vistas hermosas a los cerros colindantes. Ven y vive una experiencia única.
-                </p>
+               <div class="col-lg-8 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-1 col-xs-offset-0 text-center">
+                   <h1 class="main-title">Vive nuestras actividades</h1>
+                    <p class="main-bajada">
+                       Estos lugares se caracterizan por estar insertos en amplios bosques de flora nativa, con paisajes naturales de gran atractivo, cercanos o al lado de la rivera del Río Maipo, con vistas hermosas a los cerros colindantes. Ven y vive una experiencia única.
+                    </p>
+               </div>
             </div>
             <div class="row">
                    <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 page-down text-center">
@@ -234,14 +211,4 @@ $result_salud = $connect->query($queryselect_salud);
             </div>
         </div>
     </section>
-    
-    <?php include('php/footer.php')?>
-
-        <!--scripts-->
-        <script src="js/sticky.js"></script>
-        <script src="js/menus.js"></script>
-        <script src="js/smoothy.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<?php include('php/footer.php');?>

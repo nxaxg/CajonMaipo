@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Cajón del Maipo</title>
-    <!--btsrp-->
-    <script src="js/jquery-1.11.3.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--site-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-style.css">
-    <!--font-->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
-    <!--font awesome-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!--favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo-sticky-black.png">
-</head>
-
-<body>
+<?php require_once('php/header-meta.php'); ?>
     <header class="normal-header">
         <!--desktop header-->
         <div id="desktop-hdr" class="container-fluid col-lg-12 col-md-12 hidden-sm hidden-xs">
@@ -30,15 +8,15 @@
                         <img src="img/logo-big-white.png" alt="Logo cajón del maipo blanco">
                     </a>
                 </figure>
-                <div class="nav-second col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3">
+                <div class="nav-second col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-1">
                     <nav>
-                        <div class="login col-lg-2 col-lg-offset-7 col-md-2 col-md-offset-7">
+                        <div class="login col-md-2 col-md-offset-7 col-sm-4 col-sm-offset-3">
                             <a href="login.php">
                                 Login
                                 <span class="fa fa-user"></span>
                             </a>
                         </div>
-                        <div class="lang col-lg-2 col-md-2">
+                        <div class="lang col-md-2 col-sm-4">
                             Idioma
                             <span class="lang-icon fa fa-globe"></span>
                             <!--hidden menu-->
@@ -107,14 +85,14 @@
     <section class="main main-home">
         <div class="container-fluid full-xs">
             <div class="row">
-                <h1 class="main-title col-lg-6 col-sm-8 col-xs-10 col-lg-offset-3 col-sm-offset-2 col-xs-offset-1 text-center">
-                    Bienvenido al Cajón del Maipo
-                </h1>
-            </div>
-            <div class="row">
-                <p class="main-bajada col-lg-8 col-xs-10 col-lg-offset-2 col-xs-offset-1 text-center">
-                    Bienvenido/a al sitio oficial de El Cajón del Maipo, dónde podrás conocer todos los atractivos que ofrece esta hermosa localidad, ubicada a pocos kilometros de la Región Metropolitana de Chile.
-                </p>
+                <div class="col-lg-8 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-1 col-xs-offset-0 text-center">
+                    <h1 class="main-title">
+                        Bienvenido al Cajón del Maipo
+                    </h1>
+                    <p class="main-bajada text-center">
+                        Bienvenido/a al sitio oficial de El Cajón del Maipo, dónde podrás conocer todos los atractivos que ofrece esta hermosa localidad, ubicada a pocos kilometros de la Región Metropolitana de Chile.
+                    </p>
+                </div>
             </div>
             <div class="row">
                    <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 page-down text-center">
@@ -154,17 +132,5 @@
             </figure>
         </div>
     </section>
-    
-    
-    <?php include('php/mapa-local.php');?>
-    <?php include('php/footer.php');?>
-
-        <!--scripts-->
-    <script src="js/sticky.js"></script>
-    <script src="js/menus.js"></script>
-    <script src="js/smoothy.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-        
-</body>
-
-</html>
+<?php include('php/mapa-local.php');?>
+<?php include('php/footer.php');?>

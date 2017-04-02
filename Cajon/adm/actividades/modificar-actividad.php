@@ -17,30 +17,12 @@ if(isset($_POST[modificar]) && $_POST[modificar]=="modificar"){
 
 $categorias = array('Aire libre', 'Aventura', 'Salud');
 
+global $page;
+$page = 'Administrador';
+
+require_once('../../php/header-meta-adm.php');
+
 ?>
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Modificar acttividad | Cajón del Maipo CM</title>
-    <!--btsrp-->
-    <script src="../../js/jquery-1.11.3.js"></script>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <!--site-->
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/mobile-style.css">
-    <!--font-->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,200,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
-    <!--font awesome-->
-    <link rel="stylesheet" href="../../css/font-awesome.min.css">
-    <!--favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="../../img/logo-sticky-black.png">
-</head>
-
-<body>
     <header class="normal-header">
         <!--desktop header-->
         <div id="desktop-hdr" class="container-fluid col-lg-12 col-md-12 hidden-sm hidden-xs">
@@ -126,9 +108,11 @@ $categorias = array('Aire libre', 'Aventura', 'Salud');
     <section class="main2">
         <div class="container-fluid full-xs">
             <div class="row">
-                <h1 class="main2-title col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-                    Modificar activiadad
-                </h1>
+                <div class="col-lg-6 col-sm-6 col-xs-12 col-lg-offset-3 col-sm-offset-3 col-xs-offset-0 text-center">
+                    <h1 class="main2-title">
+                        Modificar actividad
+                    </h1>
+                </div>
             </div>
             <div class="row">
                 <form action="" method="post" class="form modificar-form col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
@@ -158,14 +142,4 @@ $categorias = array('Aire libre', 'Aventura', 'Salud');
             </div>
         </div>
     </section>
-    <?php include('../../php/footer-adm.php');?>
-
-        <!--scripts-->
-        <script src="../../js/menus.js"></script>
-        <script src="../../js/sticky.js"></script>
-        <script src="../../js/smoothy.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        
-</body>
-
-</html>
+<?php include('../../php/footer-adm.php');?>
