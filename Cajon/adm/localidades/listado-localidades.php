@@ -4,7 +4,7 @@ if(!isset($_SESSION))session_start();
         $_SESSION[volver]=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_ STRING']; header("Location: ../../login.php");
 }
 
-$queryselect = "select * from `localidades` where 1 order by `id_localidad` asc";
+$queryselect = "select * from `cajondb_localidades` where 1 order by `id_localidad` asc";
 $result = $connect->query($queryselect);
 
 ?>
@@ -140,7 +140,7 @@ $result = $connect->query($queryselect);
             </div>
         </div>
     </section>
-    <?php include('../../php/footer-adm.php')?>
+    <?php include('../../php/footer-adm.php');?>
 
         <!--scripts-->
         <script src="../../js/menus.js"></script>

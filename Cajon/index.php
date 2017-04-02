@@ -32,11 +32,7 @@
                 </figure>
                 <div class="nav-second col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3">
                     <nav>
-                        <div class="search col-lg-6 col-md-5">
-                            <input type="text" class="search-input col-lg-10 col-md-10" placeholder="Buscar...">
-                            <span class="col-lg-2 col-md-2 fa fa-search"></span>
-                        </div>
-                        <div class="login col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-2">
+                        <div class="login col-lg-2 col-lg-offset-7 col-md-2 col-md-offset-7">
                             <a href="login.php">
                                 Login
                                 <span class="fa fa-user"></span>
@@ -111,15 +107,13 @@
     <section class="main main-home">
         <div class="container-fluid full-xs">
             <div class="row">
-                <h1 class="main-title col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h1 class="main-title col-lg-6 col-sm-8 col-xs-10 col-lg-offset-3 col-sm-offset-2 col-xs-offset-1 text-center">
                     Bienvenido al Cajón del Maipo
                 </h1>
             </div>
             <div class="row">
-                <p class="main-bajada col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    Bienvenido/a al sitio oficial de El Cajón del Maipo, dónde podrás
-conocer todos los atractivos que ofrece esta hermosa localidad,
-ubicada a pocos kilometros de la Región Metropolitana de Chile.
+                <p class="main-bajada col-lg-8 col-xs-10 col-lg-offset-2 col-xs-offset-1 text-center">
+                    Bienvenido/a al sitio oficial de El Cajón del Maipo, dónde podrás conocer todos los atractivos que ofrece esta hermosa localidad, ubicada a pocos kilometros de la Región Metropolitana de Chile.
                 </p>
             </div>
             <div class="row">
@@ -163,13 +157,13 @@ ubicada a pocos kilometros de la Región Metropolitana de Chile.
     
     
     <?php include('php/mapa-local.php');?>
-    <?php include('php/footer.php')?>
+    <?php include('php/footer.php');?>
 
         <!--scripts-->
-        <script src="js/sticky.js"></script>
-        <script src="js/menus.js"></script>
-        <script src="js/smoothy.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <script src="js/sticky.js"></script>
+    <script src="js/menus.js"></script>
+    <script src="js/smoothy.js"></script>
+    <script src="js/bootstrap.min.js"></script>
         
 </body>
 

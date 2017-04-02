@@ -4,7 +4,7 @@ if(!isset($_SESSION))session_start();
         $_SESSION[volver]=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_ STRING']; header("Location: ../../login.php");
 }
 
-$queryselect = "SELECT * FROM `localidades` where `codigo` = '$_GET[code]'";
+$queryselect = "SELECT * FROM `cajondb_localidades` where `codigo` = '$_GET[code]'";
 $result = $connect->query($queryselect);
 $localidad = $result->fetch_assoc();
 
@@ -148,7 +148,7 @@ if(isset($_POST[modificar]) && $_POST[modificar]=="modificar"){
             </div>
         </div>
     </section>
-    <?php include('../../php/footer-adm.php')?>
+    <?php include('../../php/footer-adm.php');?>
 
         <!--scripts-->
         <script src="../../js/menus.js"></script>

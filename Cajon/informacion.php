@@ -182,8 +182,8 @@ conocer y visitar el Cajón del Maipo.
     </section>
     
 
-    <?php include('php/mapa-local.php')?>
-    <?php include('php/footer.php')?>
+    <?php include('php/mapa-local.php');?>
+    <?php include('php/footer.php');?>
 
         <!--scripts-->
         <script src="js/sticky.js"></script>

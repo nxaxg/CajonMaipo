@@ -5,11 +5,11 @@ if(!isset($_SESSION))session_start();
 }
 
 if(isset($_GET[id_user]) && $_GET[id_user]<>""){
-        $eliminar_query = "DELETE FROM `usuarios` WHERE `usuarios`.`id_usuario` = '$_GET[id_user]'";
+        $eliminar_query = "DELETE FROM `cajondb_usuarios` WHERE `cajondb_usuarios`.`id_usuario` = '$_GET[id_user]'";
         $connect->query($eliminar_query);
 }
 
-$queryselect = "select * from `usuarios` where 1 order by `id_usuario` asc";
+$queryselect = "select * from `cajondb_usuarios` where 1 order by `id_usuario` asc";
 $result = $connect->query($queryselect);
 
 ?>
@@ -154,7 +154,7 @@ $result = $connect->query($queryselect);
             </div>
         </div>
     </section>
-    <?php include('../../php/footer-adm.php')?>
+    <?php include('../../php/footer-adm.php');?>
 
         <!--scripts-->
         <script src="../../js/menus.js"></script>

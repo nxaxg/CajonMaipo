@@ -1,8 +1,8 @@
 <?php require_once('php/connection.php');
 
-$queryselect_aire = "select * from `actividades` where `categoria`='Aire libre' order by `id_actividad` asc";
-$queryselect_aventura = "select * from `actividades` where `categoria`='Aventura' order by `id_actividad` asc";
-$queryselect_salud = "select * from `actividades` where `categoria`='Salud' order by `id_actividad` asc";
+$queryselect_aire = "select * from `cajondb_actividades` where `categoria`='Aire libre' order by `id_actividad` asc";
+$queryselect_aventura = "select * from `cajondb_actividades` where `categoria`='Aventura' order by `id_actividad` asc";
+$queryselect_salud = "select * from `cajondb_actividades` where `categoria`='Salud' order by `id_actividad` asc";
 $result_aire = $connect->query($queryselect_aire);
 $result_aventura = $connect->query($queryselect_aventura);
 $result_salud = $connect->query($queryselect_salud);

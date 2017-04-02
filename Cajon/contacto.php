@@ -161,7 +161,7 @@ if(isset($_POST[enviar]) && $_POST[enviar]="enviar"){
         </div>
     </section>
     
-    <?php include('php/footer.php')?>
+    <?php include('php/footer.php');?>
 
         <!--scripts-->
         <script src="js/sticky.js"></script>

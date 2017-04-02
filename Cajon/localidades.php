@@ -1,6 +1,6 @@
 <?php require_once('php/connection.php');
 
-$queryselect = "select * from `localidades` where 1";
+$queryselect = "select * from `cajondb_localidades` where 1";
 $result = $connect->query($queryselect);
 $total = $result->num_rows;
 
@@ -173,7 +173,7 @@ $total = $result->num_rows;
         </div>
     </section>
     
-    <?php include('php/footer.php')?>
+    <?php include('php/footer.php');?>
 
         <!--scripts-->
         <script src="js/sticky.js"></script>

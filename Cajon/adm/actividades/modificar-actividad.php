@@ -4,12 +4,12 @@ if(!isset($_SESSION))session_start();
         $_SESSION[volver]=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_ STRING']; header("Location: ../../login.php");
 }
 
-$queryselect = "SELECT * FROM `actividades` where `codigo` = '$_GET[code]'";
+$queryselect = "SELECT * FROM `cajondb_actividades` where `codigo` = '$_GET[code]'";
 $result = $connect->query($queryselect);
 $actividad = $result->fetch_assoc();
 
 if(isset($_POST[modificar]) && $_POST[modificar]=="modificar"){
-    $querymod = "UPDATE `actividades` set `titulo`='$_POST[titulo]', `bajada`='$_POST[bajada]', `descripcion`='$_POST[descripcion]', `categoria`='$_POST[categoria]' where `id_actividad`='$actividad[id_actividad]'";
+    $querymod = "UPDATE `cajondb_actividades` set `titulo`='$_POST[titulo]', `bajada`='$_POST[bajada]', `descripcion`='$_POST[descripcion]', `categoria`='$_POST[categoria]' where `id_actividad`='$actividad[id_actividad]'";
     $connect->query($querymod);
     $ID = $connect->insert_id; 
     if($connect->query($querymod))header("Location: listado-actividades.php");   
@@ -158,7 +158,7 @@ $categorias = array('Aire libre', 'Aventura', 'Salud');
             </div>
         </div>
     </section>
-    <?php include('../../php/footer-adm.php')?>
+    <?php include('../../php/footer-adm.php');?>
 
         <!--scripts-->
         <script src="../../js/menus.js"></script>

@@ -1,6 +1,6 @@
 <?php require_once('../php/connection.php');
 
-$queryselect = "select * from `localidades` where `codigo`='$_GET[code]';";
+$queryselect = "select * from `cajondb_localidades` where `codigo`='$_GET[code]';";
 $result = $connect->query($queryselect);
 $localidad = $result->fetch_assoc();
 

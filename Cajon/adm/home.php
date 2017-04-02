@@ -124,7 +124,7 @@ if(!isset($_SESSION))session_start();
             </div>
         </div>
     </section>
-    <?php include('../php/footer-int.php')?>
+    <?php include('../php/footer-int.php');?>
 
         <!--scripts-->
         <script src="../js/menus.js"></script>

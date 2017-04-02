@@ -1,6 +1,6 @@
 <?php require_once('../php/connection.php');
 
-$queryselect = "select * from `actividades` where `codigo`='$_GET[code]';";
+$queryselect = "select * from `cajondb_actividades` where `codigo`='$_GET[code]';";
 $result = $connect->query($queryselect);
 $actividad = $result->fetch_assoc();
 

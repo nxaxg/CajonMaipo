@@ -5,13 +5,13 @@ if(!isset($_SESSION))session_start();
 }
 
 if(isset($_POST[agregar]) && $_POST[agregar]=="agregar"){
-    $querysel = "select `username` from `usuarios` where `usuarios`.`username`='$_POST[username]'";
+    $querysel = "select `username` from `cajondb_usuarios` where `cajondb_usuarios`.`username`='$_POST[username]'";
     $result = $connect->query($querysel);
     $exist = $result->fetch_assoc();
     if($exist){
         $error = true;
     }else{
-        $queryinsert = "INSERT INTO `usuarios` (`nombre`, `email`, `username`, `password`) VALUES ('$_POST[nombre]', '$_POST[email]', '$_POST[username]', '$_POST[password]')";
+        $queryinsert = "INSERT INTO `cajondb_usuarios` (`nombre`, `email`, `username`, `password`) VALUES ('$_POST[nombre]', '$_POST[email]', '$_POST[username]', '$_POST[password]')";
         $connect->query($queryinsert);
 
          $ID = $connect->insert_id;
@@ -150,7 +150,7 @@ if(isset($_POST[agregar]) && $_POST[agregar]=="agregar"){
             </div>
         </div>
     </section>
-    <?php include('../../php/footer-adm.php')?>
+    <?php include('../../php/footer-adm.php');?>
 
         <!--scripts-->
         <script src="../../js/menus.js"></script>

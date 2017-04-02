@@ -2,9 +2,8 @@
 
 if(!isset($_SESSION))session_start();
 
-
 if((isset($_POST[user]) && $_POST[user]<>"") && (isset($_POST[pass]) && $_POST[pass]<>"") ){
-    $query="SELECT * FROM `usuarios` where username ='$_POST[user]' AND password='$_POST[pass]'";
+    $query="SELECT * FROM `cajondb_usuarios` where username ='$_POST[user]' AND password='$_POST[pass]'";
     $resultado=$connect->query($query);
     
     if($total = $resultado->num_rows){
@@ -155,7 +154,7 @@ if((isset($_POST[user]) && $_POST[user]<>"") && (isset($_POST[pass]) && $_POST[p
         </div>
     </section>
     
-    <?php include('php/footer.php')?>
+    <?php include('php/footer.php');?>
 
         <!--scripts-->
         <script src="js/sticky.js"></script>
