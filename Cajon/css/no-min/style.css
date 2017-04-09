@@ -294,7 +294,19 @@ header .nav-primary .nav-option:hover,
     max-height: 100vh;
     width: 100%;
     z-index: 0;
+}
+.main-container{
     padding-top: 180px;
+    height: 100%;
+    z-index: 5;
+    position: relative;
+}
+.main-wrap{
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .main-home{
@@ -353,12 +365,6 @@ header .nav-primary .nav-option:hover,
     background-position: center;
 }
 
-.main .main-title,
-.main .main-bajada{
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-}
-
 .main .main-title{
     font-family: 'Roboto';
     font-weight: bold;
@@ -366,6 +372,8 @@ header .nav-primary .nav-option:hover,
     padding: .5em;
     text-transform: uppercase;
     position: relative;
+    text-shadow: 0 .5rem .5rem rgba(0,0,0,0.8);
+    color: white;
 }
 
 .main .main-bajada{
@@ -374,6 +382,8 @@ header .nav-primary .nav-option:hover,
     padding: 1em .5em;
     line-height: 1.5em;
     margin-top: 40px;
+    color: white;
+    text-shadow: 0 .2rem .2rem rgba(0,0,0,0.8);
 }
 
 .page-down{
@@ -699,12 +709,22 @@ header .nav-primary .nav-option:hover,
     position: relative;
     width: 100%;
     z-index: 0;
-    padding: 120px 0 50px 0;
-    background-color: #f3f1f0;
+    background: url('../img/clouds.jpg');
+    background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+    /*-webkit-filter: */
+    filter: grayscale(50%);
+}
+
+.main2-container{
+    position: relative;
+    padding: 120px 0;
+    z-index: 2;
 }
 
 .main2-title{
-    background-color: #181b21;
+    text-shadow: 0 .5rem .5rem rgba(0,0,0,0.8);
     color: white;
     padding: 15px 0;
     text-transform: uppercase;

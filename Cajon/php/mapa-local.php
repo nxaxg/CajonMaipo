@@ -2,7 +2,7 @@
     <div class="container-fluid full-xs">
         <div class="row">
             <h2 class="content-title text-center col-lg-2 col-lg-offset-5 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">Visitanos</h2>
-            <div id="mapa-local" class="map-box col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+            <div id="mapa-local" class="map-box col-xs-12">
                 <script>
                     function initMap() {
                         var mapDiv = document.getElementById('mapa-local');

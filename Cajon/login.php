@@ -106,7 +106,7 @@ require_once('php/header-meta.php');
     </header>
     <!--main-->
     <section class="main2">
-        <div class="container-fluid full-xs">
+        <div class="main2-container container-fluid full-xs">
             <div class="row">
                <!--page title-->
                 <div class="col-lg-6 col-sm-6 col-xs-12 col-lg-offset-3 col-sm-offset-3 col-xs-offset-0 text-center">

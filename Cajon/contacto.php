@@ -107,14 +107,12 @@ require_once('php/header-meta.php');
     </header>
     <!--main-->
     <section class="main2">
-        <div class="container-fluid full-xs">
+        <div class="main2-container container-fluid full-xs">
             <div class="row">
                <!--page title-->
                 <div class="col-lg-6 col-sm-6 col-xs-12 col-lg-offset-3 col-sm-offset-3 col-xs-offset-0 text-center">
                     <h1 class="main2-title">Contacto</h1>
                 </div>
-            </div>
-            <div class="row">
                 <form action="" method="post" class="form contact-form col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
                     <input type="text" id="nametxt" name="nombre" class="col-lg-6 col-sm-6 col-xs-12 input-form-50" required placeholder="Nombre">
                     <input type="email" id="mailtxt" name="mail" class="col-lg-6 col-sm-6 col-xs-12 input-form-50" required placeholder="E-mail">

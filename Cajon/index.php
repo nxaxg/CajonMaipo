@@ -83,7 +83,8 @@
     </header>
     <!--main-->
     <section class="main main-home">
-        <div class="container-fluid full-xs">
+        <div class="main-wrap"></div>
+        <div class="main-container container-fluid full-xs">
             <div class="row">
                 <div class="col-lg-8 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-1 col-xs-offset-0 text-center">
                     <h1 class="main-title">
@@ -93,11 +94,9 @@
                         Bienvenido/a al sitio oficial de El Cajón del Maipo, dónde podrás conocer todos los atractivos que ofrece esta hermosa localidad, ubicada a pocos kilometros de la Región Metropolitana de Chile.
                     </p>
                 </div>
-            </div>
-            <div class="row">
-                   <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 page-down text-center">
-                       <a href="#home-content-uno" class="fa fa-angle-down" id="page-down-icon" title="Going down"></a>
-                   </div>
+                <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 page-down text-center">
+                   <a href="#home-content-uno" class="fa fa-angle-down" id="page-down-icon" title="Going down"></a>
+               </div>
             </div>
         </div>
     </section>

@@ -87,7 +87,8 @@ require_once('php/header-meta.php');
     </header>
     <!--main-->
     <section class="main main-info">
-        <div class="container-fluid full-xs">
+        <div class="main-wrap"></div>
+        <div class="main-container container-fluid full-xs">
             <div class="row">
                 <div class="col-lg-8 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-1 col-xs-offset-0 text-center">
                     <h1 class="main-title">

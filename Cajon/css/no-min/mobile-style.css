@@ -6,7 +6,7 @@
         transition: 0.5s;
     }
     
-    .main{
+    .main-container{
         padding-top: 160px;
     }
     
@@ -34,10 +34,12 @@
         float: left;
         text-align: left;
     }
-    
     .main{
-        padding-top: 100px;
-        height: 580px;
+        height: 600px;
+        max-height: 100vh;
+    }
+    .main-container{
+        padding-top: 120px;
     }
     
     .content .content-title,
