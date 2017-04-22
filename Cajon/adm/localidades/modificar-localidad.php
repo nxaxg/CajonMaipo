@@ -67,7 +67,7 @@ require_once('../../php/header-meta-adm.php');
         <div id="mobile-hdr" class="container-fluid col-sm-12 col-xs-12 hidden-lg hidden-md">
             <div class="row">
                 <figure class="logo-ipad col-sm-4 hidden-xs">
-                    <a href="#" title="Take me Home">
+                    <a href="../../index.php" title="Take me Home">
                         <img src="../../img/logo-big-white.png" alt="Logo cajón del maipo white">
                     </a>
                 </figure>
@@ -104,7 +104,8 @@ require_once('../../php/header-meta-adm.php');
     </header>
     <!--main-->
     <section class="main2">
-        <div class="container-fluid full-xs">
+        <div class="main-wrap"></div>
+        <div class="main2-container container-fluid full-xs">
             <div class="row">
                 <div class="col-lg-6 col-sm-6 col-xs-12 col-lg-offset-3 col-sm-offset-3 col-xs-offset-0 text-center">
                     <h1 class="main2-title">

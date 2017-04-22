@@ -9,6 +9,12 @@ $page = $localidad[titulo];
 
 require_once('../php/header-meta-int.php');
 
+$localidadimg = array('loc-canelo'=> array('Valle el Canelo', 'Riachuelo', 'Vertiente', 'Cascada'),
+                        'loc-manzano' => array('Montaña el Manzano', 'Ruinas el manzano', 'Cordillera Manzano', 'Paisaje Manzano'),
+                        'loc-sangabriel' => array('San Gabriel lago', 'San Gabriel Cordillera', 'San Gabriel Cielo', 'San Gabriel Valle'),
+                        'loc-yeso' => array('El Yeso lago', 'El Yeso laguna', 'El Yeso lago 2', 'El Yeso montaña')
+                        );
+
 ?>
         <header class="normal-header">
             <!--desktop header-->
@@ -57,12 +63,12 @@ require_once('../php/header-meta-int.php');
             <div id="mobile-hdr" class="container-fluid col-sm-12 col-xs-12 hidden-lg hidden-md">
                 <div class="row">
                     <figure class="logo-ipad col-sm-4 hidden-xs">
-                        <a href="#" title="Take me Home">
+                        <a href="../index.php" title="Take me Home">
                             <img src="../img/logo-big-white.png" alt="Logo cajón del maipo white">
                         </a>
                     </figure>
                     <figure class="logo-iphone col-xs-4 hidden-sm">
-                        <a href="#" title="Take me Home">
+                        <a href="../index.php" title="Take me Home">
                             <img src="../img/logo-sticky-white.png" alt="Logo cajón del maipo white">
                         </a>
                     </figure>
@@ -124,7 +130,11 @@ require_once('../php/header-meta-int.php');
                 <div class="row">
                     <div class="img-container col-lg-12 col-lg-offset-0 full-xs">
                         <!--php callback-->
-                        <?php for($x=0; $x<4; $x++){?>
+                        <?php
+                        $y = 0;
+                        for($x=0; $x<4; $x++){
+                            $y++;
+                        ?>
                             <!--localidad-->
                             <figure class="col-lg-3 col-sm-3 col-xs-6 full-xs">
                                 <!--img localidad-->
@@ -142,11 +152,17 @@ require_once('../php/header-meta-int.php');
                                 </a>
                             </figure>
                             <!--img-modal-->
+                            <?php
+                                $imagesrc = '../img/img-'.$localidad[codigo].'-0'. $x .'.jpg';
+                                $code = $localidad[codigo];
+                                $title = $localidadimg[$code];
+                            ?>
                             <div id="imgModal-<?php echo $x;?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" title="<?php echo $localidad[titulo]?>">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-body">
-                                            <img src="../img/img-<?php echo $localidad[codigo];?>-0<?php echo $x;?>.jpg" class="img-responsive">
+                                            <img src="<?php echo $imagesrc; ?>" alt="<?php echo $localidad['titulo'];?>" class="img-responsive">
+                                            <figcaption class="modal-caption"><?php echo $localidad['titulo']. ', '. $title[$x] ?></figcaption>
                                         </div>
                                     </div>
                                 </div>

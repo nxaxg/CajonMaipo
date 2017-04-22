@@ -55,12 +55,12 @@ require_once('php/header-meta.php');
         <div id="mobile-hdr" class="container-fluid col-sm-12 col-xs-12 hidden-lg hidden-md">
             <div class="row">
                 <figure class="logo-ipad col-sm-4 hidden-xs">
-                    <a href="#" title="Take me Home">
+                    <a href="index.php" title="Take me Home">
                         <img src="img/logo-big-white.png" alt="Logo cajón del maipo white">
                     </a>
                 </figure>
                 <figure class="logo-iphone col-xs-4 hidden-sm">
-                    <a href="#" title="Take me Home">
+                    <a href="index.php" title="Take me Home">
                         <img src="img/logo-sticky-white.png" alt="Logo cajón del maipo white">
                     </a>
                 </figure>

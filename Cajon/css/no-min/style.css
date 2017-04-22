@@ -709,11 +709,12 @@ header .nav-primary .nav-option:hover,
     position: relative;
     width: 100%;
     z-index: 0;
-    background: url('../img/clouds.jpg');
+    background: url('../img/cloudy.jpeg');
     background-position: top;
     background-size: 100%;
     background-attachment: fixed;
-    /*-webkit-filter: */
+    -ms-filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
     filter: grayscale(50%);
 }
 
@@ -734,7 +735,7 @@ header .nav-primary .nav-option:hover,
 
 .form{
     overflow: hidden;
-    background-color: #dcdcdc;
+    background-color:rgba(140,164,191,0.6);
     padding: 40px 20px;
     margin-top: 40px;
 }
@@ -834,9 +835,7 @@ header .nav-primary .nav-option:hover,
 .table-adm{
     margin-top: 40px;
     margin-bottom: 20px;
-}
-
-.table-adm{
+    background: rgba(255,255,255,0.5);
     border-collapse: collapse;
     border: 1px solid #181b21;
 }
